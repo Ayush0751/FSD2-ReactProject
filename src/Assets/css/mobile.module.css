@@ -1,0 +1,24 @@
+@media only screen and (max-width: 582px) {
+    .home_text{
+        margin-top: 30vh;
+        /* justify-content: flex-start;
+        align-items: flex-start; */
+        
+      }
+
+      .title{
+        font-size: 10rem;
+        
+      }
+
+      .title2{
+        font-size: 1rem;
+      }
+
+      .rotator {
+        font-size: 1em;
+        font-weight: 1;
+        line-height: 44px;
+        color: rgb(255, 255, 255) !important;
+      }
+  }

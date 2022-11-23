@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Prompt&display=swap");
+
+:root {
+  --bs-blue: #0095eb;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #28a745;
+  --bs-teal: #20c997;
+  --bs-cyan: #17a2b8;
+  --bs-white: #fff;
+  --bs-heading-gray: #8a8d93;
+  --bs-subheading-gray: #6a6c70;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #db6574;
+  --bs-secondary: #8a8d93;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-bck-color: #22252a;
+  --bs-shade-grey: #2d3035;
+  --bs-background: #262932;
+  --bs-font-sans-serif: "Muli", -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.setmain {
+    margin-left: 10px;
+}
+
+.sethead h1 {
+    padding-top: 105px;
+    padding-left: 135px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    font-size: 35px;
+    text-align:left;
+    color:white;
+    background-color: #044599;
+    height: 165px;
+}
+
+/* hr {
+    width: 85%;
+    border: 0;
+    padding-left: 500px;
+    border-bottom: 5px solid rgb(6, 6, 6);
+    border-radius: 5px;
+    margin: 20px auto;
+} */
+
+.setbody {
+    padding-left: 115px;
+}
+
+.settop {
+    border: 3px ;
+    padding: 20px;
+    display:inline-table;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.setgeneral {
+    /* height: 300px; */
+    float: left;
+    width: 30%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setgeneral h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.setgeneral p {
+    padding: 50px 10px 10px 10px;
+    font-size: 18px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+
+
+.setaccount {
+    /* height: 300px; */
+    width: 30%;
+    float: left;
+    position: relative;
+    left: 55px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setaccount h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setaccount p {
+    padding: 50px 10px 10px 10px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.settrade {
+    /* height: 300px; */
+    float: right;
+    width: 30%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.settrade h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+.settrade p {
+    padding: 50px 10px 10px 10px;
+    font-size: 18px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.setbottom
+{
+    border: 3px ;
+    padding: 20px;
+    margin-top: 100px;
+    display: inline-table;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    position: relative;
+    bottom: 80px;
+}
+
+.setnoti {
+    /* height: 300px; */
+    width: 30%;
+    float: left;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setnoti h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setnoti p {
+    padding: 50px 10px 10px 10px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.setprivacy {
+    /* height: 300px; */
+    width: 30%;
+    float: left;
+    position: relative;
+    left: 55px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setprivacy h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setprivacy p {
+    padding: 50px 10px 10px 10px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.setdeposit {
+    /* height: 300px; */
+    width: 30%;
+    float: right;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:lighter;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #CBDCCB;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setdeposit h2 {
+    padding: 10px;
+    background-color: #17a2b8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.setdeposit p {
+    padding: 50px 10px 10px 10px;
+    background-color: #CBDCCB;
+    height: 150px;
+    font-size: 18px;
+    font-weight: lighter;
+    word-spacing: 2px;
+    letter-spacing: 0.5px;
+}
+
+.icon {
+    font-size:60px;
+    padding: 5px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    background-color: #CBDCCB;
+    border-radius: 27px;
+}
+
+.setgeneral button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.setaccount button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.settrade button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.setprivacy button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.setdeposit button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.setnoti button {
+    font-size: 30px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+.arrow {
+    font-size: 40px;
+    padding: 5px;
+    margin-bottom: 5px;
+}

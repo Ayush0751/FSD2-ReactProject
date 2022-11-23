@@ -1,0 +1,78 @@
+.chatBox{
+    display: flex;
+    flex-direction: column;
+}
+.chattingWith{
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.text{
+    background-color: burlywood;
+    padding: 10px;
+    border-radius: 5%;
+    /* border-bottom: 10%; */
+    margin: 10px;
+}
+.userText{
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 5%;
+    /* border-bottom: 10%; */
+    margin: 10px;
+
+}
+
+.userChat{
+    /* align-items: flex-end; */
+    text-align: end;
+}
+.time{
+    font-size: 0.8em;
+    margin: 0px;
+    position: relative;
+    top: -20px;
+    left: 10px;
+}
+.time2{
+    display: flex;
+    /* text-align: end;
+    align-items: flex-end; */
+    justify-content: end;
+    /* color: aquamarine; */
+    font-size: 0.8em;
+    margin: 0px;
+    position: relative;
+    top: -20px;
+    right: 15px;
+}
+
+.sendMsg{
+    font-size: 1.5em;
+    margin: 2px;
+    
+}
+
+.sendBtn{
+    font-size: 1.5rem;
+    /* display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: baseline;
+    text-align: ;
+    bottom: 0px; */
+    padding: 0px 25px 0px 25px;
+    background-color: cornflowerblue;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.msgBox{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: -68px;
+    
+}

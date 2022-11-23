@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Prompt&display=swap");
+:root {
+  --bs-blue: #0095eb;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #28a745;
+  --bs-teal: #20c997;
+  --bs-cyan: #17a2b8;
+  --bs-white: #fff;
+  --bs-heading-gray: #8a8d93;
+  --bs-subheading-gray: #6a6c70;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #db6574;
+  --bs-secondary: #8a8d93;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-bck-color: #22252a;
+  --bs-shade-grey: #2d3035;
+  --bs-background: #262932;
+  --bs-font-sans-serif: "Muli", -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+.container1 {
+  display: flex;
+  position: relative;
+}
+.tile1,
+.tile2 {
+  position: relative;
+  display: block;
+  top: 82px;
+  left: 198px;
+  margin: 5px 50px;
+  /* column-gap: 50px; */
+}
+.tile1 {
+    min-width: 47rem;
+    height: 16em;
+    left: 9em;
+    top: 8em;
+    display: flex;
+    background-image: linear-gradient(to right, #343a40, #0095eb);
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow:0 19px 38px rgb(0 0 0 / 55%), 0 15px 12px rgb(0 0 0 / 6%);
+
+}
+.note {
+  display: block;
+  min-width: fit-content;
+}
+.depositPic {
+  background-image: url(../../img/deposit.png);
+  min-height: 15em;
+  min-width: 44%;
+  position: relative;
+  display: block;
+  right: 1em;
+  background-size: 14em;
+  /* font-size: 17px; */
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.welNote {
+  font-family: "Caveat", cursive;
+  position: relative;
+  left: 10%;
+  color: aliceblue;
+  font-weight: bolder;
+  font-size: 4rem;
+  margin: 0px;
+  top: 0.8em;
+}
+.flex1 {
+  flex: 1;
+  min-width: 250px;
+  margin: 0 auto 50px;
+}
+.button {
+    padding: 0.2rem 0.3rem;
+    background: white;
+    left: 17%;
+    top: 13px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.4rem;
+    font-family: 'Prompt', sans-serif;
+    /* text-transform: uppercase; */
+    /* font-weight: 700; */
+    position: relative;
+    will-change: transform;
+}
+.btn3 {
+    letter-spacing: 0.05rem;
+    position: relative;
+    /* background-image: linear-gradient(to right, #0095eb, #343a40); */
+    background-color: rgba(214, 209, 209, 0);
+    color: rgba(255, 255, 255, 0.801);
+    overflow: hidden;
+    top: 2.3em;
+    transition: 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0);
+    /* border-radius: 0.3rem; */
+    z-index: 1;
+    box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 22%);
+}
+.btn3:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: scale(0.95);
+}
+.tile2{
+  min-width: 25rem;
+  height: 16em;
+  left: 10em;
+  top: 8em;
+    /* background: rgba(245, 222, 179, 0.593); */
+    display: flex;
+    /* background: var(--bs-background); */
+    background-image: linear-gradient(to left, #343a40 3%, #0095eb);
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow:0 19px 38px rgb(0 0 0 / 55%), 0 15px 12px rgb(0 0 0 / 6%);
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+.tile2:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  transform: scale(0.95);
+}
+.tile2 a{
+  text-decoration: none;
+}
+.tile2_pic{
+    background-image: url(../../img/trader-tile.png);
+    min-height: 12em;
+    min-width: 72%;
+    position: relative;
+    display: block;
+    bottom: 5em;
+    left: 12.8em;
+    background-size: 11em;
+    /* font-size: 17px; */
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.container2{
+  position: relative;
+  display: flex;
+  width: 79em;
+  height: fit-content;
+  top: 12em;
+  overflow: hidden;
+  left: 12em;
+  /* box-shadow:0 19px 38px rgb(0 0 0 / 55%), 0 15px 12px rgb(0 0 0 / 6%); */
+}
+.certAd1,.certAd2{
+  position: relative;
+  font-family: 'Prompt', sans-serif;
+  display: block;
+}
+
+.certAd1{
+  color: white;
+  top: 2em;
+  left: 0.2em;
+  font-family: "Caveat", cursive;
+  font-size: 1.9em;
+}
+.certAd2{
+  color: #ffffffc4;
+  top: 3.5em;
+  left: 1rem;
+  font-size: 1.1rem;
+}
+.Container_ticker{
+    position: relative;
+    display: flex;
+    /* overflow: hidden; */
+    height: fit-content;
+    /* transform: translateX(83%); */
+    width: fit-content;
+    animation: moving 25s linear infinite;
+}
+@keyframes moving{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.ticker_tile{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  left: 0rem;
+  /* min-height: 5.5rem; */
+  margin: 0px 2px;
+  width: 31vh;
+  height: 6em;
+  background: white;
+  top: 0em;
+  cursor: pointer;
+}
+/* .container2:hover {
+  animation:none;
+  background-color: black;
+  display: none; *
+} */
+.tickerUp{
+  text-align: left;
+  top: 0.5em;
+  position: absolute;
+  left: 0.5em;
+}
+.tickerDown{
+  top: 2em;
+  position: relative;
+  display: flex;
+  right: 4em;
+}
+.userId{
+  margin-right: 11px;
+  font-family: general-font,Open Sans,Arial,sans-serif;
+  font-style: normal;
+  font-size: .75rem;
+  color: #777;
+  letter-spacing: -.2px;
+  text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.downRight img{
+  max-width: 39px;
+  max-height: 43px;
+}
+.downRight{
+  margin: 0px 2px;
+  left: 7.5em;
+  bottom: 0.5em;
+  height: 3em;
+  position: relative;
+}
+.downLeft{
+  margin: 0px 2px;
+
+}
+.TickerPoints{
+  font-family: general-font,Open Sans,Arial,sans-serif;
+  font-style: normal;
+  font-size: 1.125rem;
+  letter-spacing: -.35px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+.TickPoint_change{
+  color: #3dae23;
+  font-family: general-font,Open Sans,Arial,sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  position: relative;
+  left: 0.4em;
+  /* letter-spacing: -.2px; */
+  font-weight: 700;
+  bottom: 20px;
+}
+/* graph */
+.container3{
+  position: absolute;
+  top: 82vh;
+  display: flex;
+  background: white;
+  width: 79.5em;
+  left: 12em;
+  height: 25em;
+  border-radius: 10px;
+    box-shadow:0 19px 38px rgb(0 0 0 / 14%), 0 15px 12px rgb(0 0 0 / 6%);
+
+}
+.chartDetails{
+  position: relative;
+}
+.chart{
+  width: 48em;
+  height: 23em;
+  left: 8em;
+  top: 0.5em;
+  position: relative;
+}
+.headChart{
+  position: relative;
+  /* text-align: center; */
+  /* align-items: center; */
+  left: 3.2em;
+  top: 1em;
+}
+.cbox{
+  position: relative;
+  left: 4em;
+  top: 2em;
+  margin: 36px 0px;
+}
+.thisMonth{
+  color: rgba(43,43,43,.7);
+  font-size: 14px;
+  font-family: Roboto,sans-serif;
+}
+.h5{
+  font-size: 1.8rem;
+    color: #000000b3;
+}
+.chartBtn{
+  text-decoration: none;
+  background-color: #0095eb;
+  color: white;
+  width: 2em;
+  position: relative;
+  left: 3.1em;
+  font-size: 1.6em;
+  height: 2em;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+.chartBtn:hover{
+  background-color: #0095ebd1;
+  color: white;
+}
+.container4{
+  position: absolute;
+    display: flex;
+    left: 12em;
+    width: 84%;
+    top: 67em;
+}
+/* .contLeft,.contRight{
+margin: 0px 5px;
+} */
+
+.contLeft{
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 38em;
+  min-height: 30em;
+  margin-right: 124px;
+  box-shadow: 0 19px 38px rgb(0 0 0 / 14%), 0 15px 12px rgb(0 0 0 / 6%);
+}
+.contLeft h3{
+  position: relative;
+  left: 1.7em;
+  
+  font-size: 1.5em;
+
+  display: inline-block;
+  top: 0.7em;
+}
+.news_sec h6, .news_sec p{
+  left: 3em;
+  position: relative;
+  font-size: 1em;
+}
+.news_sec{
+  position: relative;
+  margin: 38px 0px;
+  border-spacing: 10;
+  /* border-bottom: 2px solid #0000000f; */
+  border-top: 2px solid #0000000f;
+  padding-top: 21px;
+}
+.contLeft a:hover{
+  color: #0095ebb6;
+}
+.contLeft a{
+  text-decoration: none;
+  color: var(--bs-blue);
+  left: 12em;
+  font-size: 1.3em;
+  position: relative;
+  font-weight: 500;
+}

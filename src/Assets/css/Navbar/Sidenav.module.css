@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap");
+:root {
+  --bs-blue: #0095eb;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #28a745;
+  --bs-teal: #20c997;
+  --bs-cyan: #17a2b8;
+  --bs-white: #fff;
+  --bs-heading-gray: #8a8d93;
+  --bs-subheading-gray: #6a6c70;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #db6574;
+  --bs-secondary: #8a8d93;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-bck-color: #22252a;
+  --bs-shade-grey: #2d3035;
+  --bs-background: #262932;
+  --bs-font-sans-serif: "Muli", -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+.container {
+  display: inline-flex;
+  /* flex-direction: unset; */
+  position: fixed;
+  width: 12vh;
+  left: 0em;
+  top: 0em;
+  z-index: 2;
+  justify-content: center;
+  height: 105vh;
+  /* overflow: hidden; */
+  background-color: var(--bs-background);
+
+}
+.joint {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.3em;
+  cursor: pointer;
+}
+.hamburg2 {
+  position: relative;
+  color: var(--bs-blue);
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  bottom: 0.2vh;
+  font-size: 3em;
+  top: 0.5em;
+
+  /* border-right: 2px solid #0d6efd;
+    border-left: 2px solid #0d6efd;
+    border-radius: 100%; */
+}
+.navicon {
+  position: relative;
+  margin: 27px 16px;
+  padding: 9px 0px;
+}
+.sidenav_front {
+  position: absolute;
+  top: 21vh;
+  /* width: 10px; */
+}
+.profile_pic img {
+  position: absolute;
+  height: 1.2em;
+  border-radius: 8%;
+  /* right: 37vh; */
+  justify-content: center;
+  bottom: 1vh;
+}
+.profile_pic {
+  display: block;
+}
+
+
+.back_container {
+  background-color: var(--bs-background);
+  min-width: 21%;
+  z-index: 2;
+  position: fixed;
+  min-height: 105vh;
+  color: white;
+  top: 0em;
+  left: 0em;
+  display: grid;
+  visibility: hidden;
+  transform:translateX(-100px);
+  transition: all 0.4s linear ;
+  /* font-size: 30px; */
+  
+}
+.temp {
+  background-color: var(--bs-background);
+  min-width: 21%;
+  z-index: 2;
+  position: fixed;
+  min-height: 105vh;
+}
+
+.back_container_min {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* scrollbar-width: 0.2em;
+  scrollbar-base-color: #0095eb; */
+  /* height: 119%;
+    top: 31%; */
+}
+#min_container::-webkit-scrollbar {
+  width: 0.4em;
+  /* border-radius: 100%; */
+}
+
+#min_container::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 20%;
+
+}
+
+#min_container::-webkit-scrollbar-thumb {
+  background-color: var(--bs-blue);
+  /* outline: 1px solid rgb(255, 255, 255); */
+  border-radius: 20%;
+}
+.contents,
+.contents_2 {
+  display: grid;
+  top: 21%;
+  position: relative;
+  left: 8%;
+  align-content: center;
+  width: 81%;
+  height: fit-content;
+}
+.contents_3 {
+  position: relative;
+  background-color: #262932;
+  height: 7em;
+  top: 1px;
+}
+.contents a,
+.contents_2 a,
+.contents_3 a {
+  text-decoration: none;
+  color: white;
+}
+.contents a:hover,
+.contents_2 a:hover,
+.contents_3 a:hover {
+  background-color: #3a3c44;
+}
+.logo {
+  color: var(--bs-blue);
+  /* left: 29%; */
+  align-items: center;
+  position: absolute;
+  height: 10%;
+  /* top: 2%; */
+  min-height: 2.5em;
+  font-size: 5vh;
+  font-family: cursive;
+  width: 95%;
+  text-align: center;
+  overflow: hidden;
+  background-color: var(--bs-background);
+  z-index: 2;
+}
+.profile_bar {
+  display: flex;
+  gap: calc(17px);
+  font-family: "Baloo Bhai 2", cursive;
+}
+.profile_bar p {
+  font-size: 1.4em;
+  position: relative;
+  top: 5%;
+}
+.profile_bar img {
+  
+  display: flex;
+  height: 6vh;
+  border-radius: 10%;
+  top: 1.3em;
+  position: relative;
+
+}
+.profile_prog {
+  display: grid;
+  width: fit-content;
+  padding-bottom: 22px;
+  font-size: 0.8em;
+}
+.profile_prog progress {
+  width: 37vh;
+  height: 1vh;
+  background-color: var(--bs-dark);
+  /* color: #0095eb; */
+}
+.profile_prog progress::-webkit-progress-value {
+  background-color: var(--bs-blue);
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px 3px rgba(45, 34, 34, 0.8);
+}
+
+.com {
+  display: flex;
+  /* height: fit-content; */
+  margin-top: 20px;
+}
+.contents a {
+  /* font-family: num,'Open Sans',ariel,sans-serif; */
+  margin: 2px 2px;
+  font-size: 24px;
+  font-weight: 150;
+  letter-spacing: 0.75px;
+}
+.profile_prog a {
+  font-size: 1.2em;
+  font-family: "Quicksand", sans-serif;
+}
+.profile_prog a:hover {
+  color: var(--bs-blue);
+  background-color: var(--bs-background);
+}
+.contents_2 a {
+  margin: 3px 2px;
+  font-size: 18px;
+  font-weight: 150;
+  letter-spacing: 0.75px;
+}
+.contents_2 p {
+  margin: 21px 2px;
+  font-size: 16px;
+}
+.contents_3 button {
+  font-size: 18px;
+  width: 74%;
+  height: 57%;
+  left: 13%;
+  top: 20%;
+  position: relative;
+  border-radius: 7%;
+  border: 1px;
+  background: var(--bs-blue);
+  color: white;
+}
+.joint_box:hover .back_container {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.close{
+  position: absolute;
+  color: #377599;
+  z-index: 3;
+  left: 85%;
+  top: 0%;
+  font-size: 3em;
+  display: none;
+  /* display: none; */
+}
+@media only screen and (min-width: 220px) and (max-width: 463px) {
+  .container {
+    visibility: hidden;
+  }
+  .back_container{
+    width: 100%;
+    transform:translateX(0px);
+    min-width: 18%;
+
+  }
+  .contents_3{
+    left: 2%;
+  }
+  .close{
+    display: block;
+  }
+}

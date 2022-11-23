@@ -1,0 +1,418 @@
+body{
+    /* background-color: white; */
+}
+.feedOuterContainer{
+    display: flex;
+    position: relative;
+    right: 0px;
+    left: 0px;
+    top: 73px;
+    margin: auto;
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 80%;
+    height: 200%;
+    /* border: 2px solid blue; */
+}
+
+
+.feedInner{
+    /* position: fixed; */
+    /* left */
+    margin: 1%;
+    width: 65%;
+    /* border: 2px solid red; */
+    display:flex;
+    flex-direction: column;
+    /* align-ite    ms:center; */
+    /* box-shadow: 1px -2px 22px rgb(213, 199, 199); */
+}
+.textAr{
+    display: flex;
+    position: relative;
+    top: 40px;
+}
+.textAr input{
+    /* size: 10px; */
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 5%;
+    border: 2px solid #0095EB;
+}
+.textAr button{
+    /* width: ; */
+    font-size: 1.3rem;
+    margin: 2px 0px 0px 0px;
+    padding: 7px 20px 7px 20px;
+    background-color: #0095EB;
+    border-radius: 15%;
+    cursor: pointer;
+}
+.post{
+    /* display: flex; */
+    box-shadow: 1px -2px 22px rgb(213, 199, 199);
+    border: 2px;
+    /* flex-direction: row; */
+}
+.postTop{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+}
+.dp{
+    margin: 1%;
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    /* position: absolute; */
+    /* width: 500px; */
+    /* background-color: black; */
+}
+.dp img{
+    width: 100%;
+    height: 100%;
+}
+
+.action{
+    position: relative;
+    left: 20px;
+    width: 14%;
+    margin: 4px;
+}
+
+.post-bottom .action{
+    padding:10px;
+    border-radius:10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+.post-bottom .action:hover{
+    background:rgb(220, 193, 193);
+}
+
+ .post-bottom > .action{
+    color:#d74;
+}
+.recentPosts{
+    margin: 10px 0px;
+    box-shadow: 1px -2px 22px rgb(213, 199, 199);
+    /* border: 2px; */
+}
+.trdrDp{
+    margin: 1%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    /* position: absolute; */
+    /* width: 500px; */
+    /* background-color: black; */
+}
+.trdrDp img{
+    width: 100%;
+    height: 100%;
+}
+.authName{
+    display: flex;
+    position: relative;
+    top: 25px;
+    flex-direction: column;
+}
+
+.authName h4{
+    margin: 0px;
+    /* font-size: 0.8rem; */
+}
+.authName p{
+    position: relative;
+    top: -5px;
+    font-size: 0.8rem;
+}
+.postDetails{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: -20px;
+    left: 2%;
+}
+.postHeading{
+    width: 90%;
+}
+
+.postImage{
+    width: 700px;
+    height: 350px;
+    /* width: 700px;
+    height: 350px; */
+}
+
+.postImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.react{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 5px 0px 5px;
+    flex-direction: row;
+}
+.icon{
+    margin: 15px 84px 0px 0px;
+    padding:10px;
+    border-radius:10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.icon:hover{
+    background:rgb(220, 193, 193);
+}
+
+.card1{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* border: 2px solid red; */
+    width: 24%;
+    margin: 1%;
+    /* right: 1%; */
+    height: 45%;
+    box-shadow: 1px -2px 22px rgb(213, 199, 199);
+}
+.card2{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    /* border: 2px solid red; */
+    width: 24%;
+    margin: 1%;
+    top: 55%;
+    height: 40%;
+    box-shadow: 1px -2px 22px rgb(213, 199, 199);
+}
+
+.copiers{
+    display: flex;
+    flex-direction: row;
+}
+
+.copiersPic{
+    margin: 1% 1% -4% 3%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    /* position: absolute; */
+    /* width: 500px; */
+    /* background-color: black; */
+}
+.copiersPic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.card1 h2{
+    margin: 15px 0px 7px 20px;
+}
+.card2 h2{
+    margin: 15px 0px 7px 20px;
+}
+
+.copiersName p{
+    /* width: 20%; */
+    margin: 25px 15px 0px 18px ;
+    font-weight: 100;
+    font-size: 1.1rem;
+}
+.copiersProfit p{
+    font-size: 1.2rem;
+    margin: 25px 15px 0px 18px ;
+}
+
+
+
+
+
+
+
+
+
+/* 
+.container{
+    background: var(--bs-bck-color);   
+    display:flex;
+    color: #c1c5ce;
+}
+
+.middle-panel{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+
+.dp1{
+    position: relative;
+}
+.tick-icon{
+    color: #0095EB;
+    position: absolute;
+    margin: -40px 0px 0px 25px;
+}
+
+.post{
+    width:550px;
+    background: #777d8878;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+}
+
+.post .post-top{
+    display:flex;
+    align-items: center;
+    padding:10px;
+}
+
+.post .post-top .dp{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    overflow:hidden;
+}
+
+.post .post-top .dp > img{
+    width:100%;
+    cursor:pointer;
+}
+
+.post .post-top .post-info{
+    margin-left:10px;    
+    font-weight: bold;
+}
+
+.post .post-top .post-info .name{
+    cursor:pointer;
+    font-size:16px;
+}
+
+.post .post-top .post-info .time{
+    font-size:12px;
+    cursor:pointer;
+}
+
+.post .post-top i{
+    margin-left:auto;
+    cursor: pointer;
+}
+
+.post .post-top > input{
+    height:40px;
+    padding:5px 10px;
+    border-radius:25px;
+    outline:none;
+    border:none;
+    flex:1;
+    background:#eee;
+    margin-left:10px;
+}
+
+.post .post-content{
+    font-size:16px;
+    font-weight:normal;
+    padding:10px;
+}
+
+.post .post-content > img{
+    width:100%;
+    margin:5px 0px;
+}
+
+.post .post-bottom{
+    display:flex;
+    justify-content: space-between;
+    padding:5px 5px 0px 5px;
+}
+
+.post .post-bottom .action{
+    padding:10px;
+    border-radius:10px;
+    transition: .3s ease-in;
+    cursor: pointer;
+}
+
+.post .post-bottom .action:hover{
+    background:#eee;
+}
+
+.post.create .post-bottom > .action{
+    color:#d74;
+}
+
+.container .right-panel{
+    padding:1rem;
+    padding-right: 10%;
+    
+}
+
+.right-panel .pages-section,
+.right-panel .friends-section{
+    margin:1rem 0px;
+}
+
+.right-panel .pages-section h4,
+.right-panel .friends-section h4{
+    margin-bottom:10px;
+}
+
+.right-panel .pages-section .page,
+.right-panel .friends-section .friend{
+    display: flex;
+    align-items:center;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+    padding:8px 44px;;
+    color: #c1c5ce;
+}
+
+.right-panel .pages-section .page:hover,
+.right-panel .friends-section .friend:hover{
+    background: var(--bs-subheading-gray);
+}
+
+.right-panel .pages-section .page > .dp,
+.right-panel .friends-section .friend > .dp{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    overflow:hidden;
+    cursor: pointer;
+}
+
+.right-panel .pages-section .page > .dp > img, 
+.right-panel .friends-section .friend > .dp > img{
+    width:100%;
+}
+
+.right-panel .pages-section .name, .right-panel .friends-section .name{
+    font-size:18px;
+    cursor:pointer;
+    margin-left:8px;
+}
+
+.friends-section{
+    padding: 2%;
+background-color: #777d8878;
+color: var(--bs-heading-gray);
+}
+
+
+.trader-link{
+    color: white;
+    text-decoration: none;
+}
+.trader-link:hover{
+    color: rgb(218, 209, 209);
+} */

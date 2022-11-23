@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Prompt&display=swap");
+
+:root {
+  --bs-blue: #0095eb;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #28a745;
+  --bs-teal: #20c997;
+  --bs-cyan: #17a2b8;
+  --bs-white: #fff;
+  --bs-heading-gray: #8a8d93;
+  --bs-subheading-gray: #6a6c70;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #db6574;
+  --bs-secondary: #8a8d93;
+  --bs-success: #28a745;
+  --bs-info: #17a2b8;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #343a40;
+  --bs-bck-color: #22252a;
+  --bs-shade-grey: #2d3035;
+  --bs-background: #262932;
+  --bs-font-sans-serif: "Muli", -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.generalhead button{
+    float: left;
+    margin-left: 175px;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 30px;
+    background-color: #044599;
+    border: #044599;
+}
+
+.generallanguage button {
+    float: right;
+    font-size: 30px;
+    position: relative;
+    bottom: 80px;
+    right: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.generalcurrency button{
+    float: right;
+    font-size: 30px;
+    position: relative;
+    bottom: 80px;
+    right: 30px;
+    background-color: #CBDCCB;
+    border: #CBDCCB;
+}
+
+.leftarrow {
+    color: white;
+}
+
+.generalbody {
+    padding-left: 115px;
+    
+}
+
+.generalhead {
+    padding-top: 100px;
+    background-color: #044599;
+    
+}
+
+.generalhead h1 {
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+}
+
+.generaltheme {
+    margin-top: 30px;
+    padding: 10px;
+    margin-left: 40px;
+    background-color: #CBDCCB;
+    margin-right: 110px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.generaltheme h2{
+    font-size: 25px;
+    font-weight: bold;
+    height: 100px ;
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.gende {
+    float: left;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 5px;
+    margin-left: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    position: relative;
+    bottom: 40px;
+}
+
+.gende label {
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+}
+
+.gendar label {
+    padding-left: 5px;
+    letter-spacing: 0.5px;
+}
+
+.gendar {
+    float: right;
+    position: relative;
+    right: 700px;
+    bottom: 35px;
+    font-size: 20px;
+    font-weight: lighter;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.generallanguage {
+    background-color: #CBDCCB;
+    margin-top: 40px;
+    margin-right: 110px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40px;
+}
+
+.generallanguage h2{
+    font-size: 25px;
+    font-weight: bold;
+    height: 70px ;
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.generallanguage p {
+    position: relative;
+    bottom: 5px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    padding: 5px 5px 5px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.generalcurrency {
+    background-color: #CBDCCB;
+    margin-top: 40px;
+    margin-right: 110px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 40px;
+}
+
+.generalcurrency h2{
+    font-size: 25px;
+    font-weight: bold;
+    height: 70px ;
+    padding: 10px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.generalcurrency p {
+    position: relative;
+    bottom: 5px;
+    left: 15px;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    padding: 5px 5px 5px 0px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.generallanpop {
+    width:800px;
+    background-color: #343a40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    visibility: visible;
+    
+}
+
+.generalcurpop {
+    width:400px;
+    background-color: #343a40;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    text-align: center;
+    visibility: hidden;
+    
+}
+
+.generallanpop h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.generalcurpop h1 {
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.generallanbody {
+    display: flex;
+    align-items: stretch;
+    padding-top: 80px;
+   
+}
+
+.generalcurbody {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    width: 150px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    width: 150px;
+}
+
+.left button {
+    margin-top: 15px;
+    font-size: 17px;
+    color: white;
+    background-color: #343a40;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.right button {
+    margin-top: 15px;
+    font-size: 17px;
+    color: white;
+    background-color: #343a40;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.generalcurbody button {
+    margin-top: 15px;
+    font-size: 17px;
+    color: white;
+    background-color: #343a40;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}

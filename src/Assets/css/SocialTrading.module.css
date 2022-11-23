@@ -1,0 +1,227 @@
+
+
+body{
+    background-color: black;
+}
+
+
+.social_trading{
+  background-color: black;
+  width: 100%;
+  position: relative;
+  margin: 0px 10px 0px -15px;
+  /* top: s110x; */
+  right: 0px;
+  left: 0px;
+  margin: auto;
+}
+
+.social_trading h1{
+    display: flex;
+    justify-content: center;
+    color: grey;
+    /* color: #0095EB; */
+    /* padding: 300px 0px 30px 0px; */
+    position: relative;
+    /* top: 50px; */
+    font-size: 60px;
+    /* width: 100%; */
+    
+  }
+  
+  .social_tradingp1{
+    display: flex;
+    /* flex-direction: column; */
+    background-image: url(../images/social-intro.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* z-index: -1; */
+    justify-content: flex-end;
+    /* z-index: 5; */
+    background-color: black;
+  }
+  
+  .social_trading_text{
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    margin: 141px 90px;
+    color: white;
+    background-color: black;
+  }
+
+.social_trading_outer_part{
+    display: flex;
+    flex-direction: column;  
+    background-color: black;  
+  }
+  .social_trading_inner_part{
+    background-color: black;  
+    display: flex;
+    border: 2px solid rgb(145, 142, 142);
+    margin: 50px 50px;
+    padding: 20px 50px;
+    /* height: 30%; */
+    box-shadow: 13px 3px 70px -9px rgb(195, 223, 233);
+  }
+  
+  .left_content{
+    width: 34em;
+    height: 15em;
+    color: white;
+    /* background-color: red; */
+    text-align: end;
+    align-items: center;
+    padding: 0em 0em;
+    /* margin: 30px 15px; */
+    margin-left: 15%;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    /* box-shadow: 13px 3px 70px -9px rgb(195, 223, 233); */
+    
+  }
+  .right_content{
+    width: 34em;
+    height: 15em;
+    color: white;
+    /* background-color: red; */
+    text-align: start;
+    align-items: center;
+    padding: 0em 0em;
+    /* margin: 30px 15px; */
+    margin-right: 15%;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    /* box-shadow: 13px 3px 70px -9px rgb(195, 223, 233); */
+  
+  }
+  
+  .social_trading_inner_part img{
+    width: 30rem;
+    height: 15em;
+    /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+    box-shadow: 13px 3px 70px -9px rgb(195, 223, 233);
+  }
+  
+
+  .reveal {
+    position: relative;
+    opacity: 0;
+  }
+  
+  .reveal .active{
+    opacity: 1;
+  }
+  .active{
+    opacity: 1;
+  }
+  .active.fade_bottom {
+    animation: fade_bottom 1s ease-in;
+  }
+  .active.fade_left {
+    animation: fade-left 1s ease-in;
+  }
+  .active.fade_right {
+    animation: fade-right 1s ease-in;
+  }
+  @keyframes fade_bottom {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-right {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+  @media only screen and (max-width: 805px) {
+    
+    /* .social_trading_outer_part{
+      display: flex;
+      flex-direction: row;    
+    } */
+    .social_trading_inner_part{
+      display: flex;
+      flex-direction: column;    
+      border: 2px solid rgb(145, 142, 142);
+      margin: 15px 15px;
+      padding: 20px 15px;
+      box-shadow: 13px 3px 70px -9px rgb(195, 223, 233);
+    }
+
+    .left_content{
+      margin: 0%;
+      width: 100%;
+      height: 15em;
+      color: white;
+      /* background-color: red; */
+      text-align: center;
+      align-items: center;
+      padding: 0em 0em;
+      /* margin: 30px 15px; */
+      /* margin-left: 15%; */
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      /* box-shadow: 13px 3px 70px -9px rgb(195, 223, 233); */
+      
+    }
+    .right_content{
+      margin: 0%;
+      width: 100%;
+      height: 15em;
+      color: white;
+      /* background-color: red; */
+      text-align: center;
+      align-items: center;
+      padding: 0em 0em;
+      /* margin: 30px 15px; */
+      /* margin-right: 15%; */
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      /* box-shadow: 13px 3px 70px -9px rgb(195, 223, 233); */
+    }  
+
+    .social_trading_inner_part img{
+      align-items: center;
+      justify-content: center;
+      margin: 0%;
+      width: 100%;
+      /* height: 2; */
+      /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+      box-shadow: 13px 3px 70px -9px rgb(195, 223, 233);
+    }
+    /* .social_trading_text{
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: right;
+      align-items: center;
+      margin: 141px 90px;
+      color: white;
+    } */
+  }
+  
+
+
+  
