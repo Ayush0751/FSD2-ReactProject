@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGO_URI)
     .then(()=>{
         console.log("connect letss gooooooo")
     })
-    .catch(()=>{
-        console.log("errrrrror")
+    .catch((err)=>{
+        console.log("errrrrror:",err)
     })
 
 app.listen(process.env.PORT,()=> {
