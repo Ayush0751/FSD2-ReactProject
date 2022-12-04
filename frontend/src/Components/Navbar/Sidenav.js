@@ -7,7 +7,7 @@ import "@fortawesome/react-fontawesome";
 // import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import Feed from '../Discover/Feed';
 // import styles2 from "../Assets/css/LoginPage.module.css"
-import AddFundPopUp from '../AddFundPopUp'
+import AddFundPopUp from '../AddFund/AddFundPopUp'
 import { useState } from "react";
 
 <link

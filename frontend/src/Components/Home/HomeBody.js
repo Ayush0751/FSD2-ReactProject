@@ -7,7 +7,7 @@ import { UserData } from "../Data";
 import { Chart as ChartJS } from "chart.js/auto";
 import Navbar from '../Navbar/Navbar';
 import { Link } from "react-router-dom";
-import AddFundPopUp from '../AddFundPopUp'
+import AddFundPopUp from '../AddFund/AddFundPopUp'
 
 
 

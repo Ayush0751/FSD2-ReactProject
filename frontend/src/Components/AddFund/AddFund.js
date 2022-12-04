@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Button from "./Button"
-import styles1 from "../Assets/css/LoginPage.module.css"
+import Button from "../Button"
+import styles1 from "../../Assets/css/LoginPage.module.css"
 import AddFundPopUp from './AddFundPopUp'
 
 function AddFund() {

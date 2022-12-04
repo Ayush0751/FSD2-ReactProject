@@ -9,7 +9,7 @@ import Login from './Components/Login/LoginPage';
 import HomeBody from './Components/Home/HomeBody';
 import Navbar from './Components/Navbar/Navbar';
 import Portfolio from './Components/Portfolio/Portfolio';
-import AddFund from './Components/AddFund';
+import AddFund from './Components/AddFund/AddFund';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoneyInvest from './Components/MoneyInvest';
 import ViewAll from "./Components/ViewAll/ViewAll"

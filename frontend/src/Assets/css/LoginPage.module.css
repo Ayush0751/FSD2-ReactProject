@@ -47,7 +47,7 @@
   margin: 2rem auto;
 }
 
-.fa_solid{
+.fa_solid::before{
   width: 6rem;
   height: 6rem;
   margin: 1rem;

@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import Button from "./Button";
-import styles1 from "../Assets/css/LoginPage.module.css";
-import styles2 from "../Assets/css/PopUp.module.css";
-import styles3 from "../Assets/css/InputField.module.css";
-import InputField from "./InputField";
-import Slider from "./Slider";
+import styles1 from "../../Assets/css/LoginPage.module.css";
+import styles2 from "../../Assets/css/PopUp.module.css";
+import styles3 from "../../Assets/css/InputField.module.css";
+import InputField from "../InputField";
 import { Link } from "react-router-dom";
 
 function MoneyPopUp(props) {
