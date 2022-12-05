@@ -1,0 +1,19 @@
+.imgBox{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.imgBox img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin: 7px;
+    padding: 10px;
+}
+.imgBox img:hover{
+    transform: scale(1.15);
+    transition: 0.4s;
+    overflow: hidden;
+    
+}
