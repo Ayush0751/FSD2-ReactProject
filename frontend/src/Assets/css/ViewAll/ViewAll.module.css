@@ -145,7 +145,7 @@ td img {
     position: relative;
     width: fit-content;
     display: block;
-    bottom: 17px;
+    bottom: 0px;
 }
 
 tr:nth-child(even) {
