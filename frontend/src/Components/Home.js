@@ -9,6 +9,7 @@ import Subscription from "./Subscription";
 import Testimonial from "./Testimonial";
 import Test2 from "./Test2";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 // import "../Assets/css/mobile.module.css";
 
 
@@ -29,7 +30,7 @@ function Home() {
 
           <h1 className={style.title2}>Where you can</h1>
           <h3 className={style.rotator}>
-            <ReactRotatingText className={style.namechange}
+            <ReactRotatingText  className={style.namechange}
               pause="2000"
               typingInterval="20"
               deletingInterval="10"
@@ -58,6 +59,7 @@ function Home() {
 
 
       </section>
+      <Footer/>
     </>
   );
 }
