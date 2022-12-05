@@ -6,6 +6,7 @@ import InputField from "../InputField";
 import { Link } from "react-router-dom";
 import ViaCreditCard from "./ViaCreditCard"
 import ViaUPI from "./ViaUPI"
+import ViaNetBank from "./ViaNetBank"
 
 function MoneyPopUp(props) {
 
@@ -15,7 +16,8 @@ function MoneyPopUp(props) {
         <div className={styles2.window}>
           <h1>Fund Your Account</h1>
           {/* <ViaCreditCard close = {props.close}/> */}
-          <ViaUPI close = {props.close}/>
+          {/* <ViaUPI close = {props.close}/> */}
+          <ViaNetBank close = {props.close}/>
         </div>
       </div>
     </>
