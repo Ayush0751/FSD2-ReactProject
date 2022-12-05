@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap');
 body{
   background-color: black;
 }
@@ -11,9 +12,8 @@ body{
   z-index: -1;
   /* position: fixed; */
   top: 0;
-  left: 0;
   bottom: 0;
-  right: 0;
+  right: 0px;
 }
 
 .homeMain{
@@ -125,10 +125,10 @@ body{
 
 .rotator {
   display: inline;
-  font-family: "Gilda Display", serif;
+  font-family: 'Anton', sans-serif;
   font-size: 1.8em;
   line-height: 44px;
-  color: rgb(255, 255, 255) !important;
+  color: rgba(255, 255, 255, 0.674) !important;
   font-weight: 1;
   margin: 0px;
 }

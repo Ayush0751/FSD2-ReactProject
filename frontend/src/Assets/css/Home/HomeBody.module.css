@@ -40,6 +40,7 @@
 .container1 {
   display: flex;
   position: relative;
+  bottom: 2em;
 }
 .tile1,
 .tile2 {
@@ -165,7 +166,7 @@
   display: flex;
   width: 79em;
   height: fit-content;
-  top: 12em;
+  top: 8em;
   overflow: hidden;
   left: 12em;
   /* box-shadow:0 19px 38px rgb(0 0 0 / 55%), 0 15px 12px rgb(0 0 0 / 6%); */
@@ -282,7 +283,7 @@
   left: 0.4em;
   /* letter-spacing: -.2px; */
   font-weight: 700;
-  bottom: 0px;
+  bottom: 17px;
 }
 /* graph */
 .container3{

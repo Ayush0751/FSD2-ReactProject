@@ -7,6 +7,7 @@ import { Chart as ChartJS } from "chart.js/auto";
 // import "reactjs-popup/dist/index.css";
 import LineChart from "../LineChart";
 import Navbar from "../Navbar/Navbar";
+import FooterDash from "../FooterDash";
 function Portfolio() {
   const [userData, setUserData] = useState({
     lavel: "Trade date:",
@@ -297,6 +298,7 @@ function Portfolio() {
           </div>
         </div>
       </section>
+      {/* <FooterDash/> */}
     </>
   );
 }

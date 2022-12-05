@@ -21,10 +21,32 @@ import General from "./Components/General"
 import Account from './Components/Account';
 import Trading from './Components/Trading';
 import MyPlanScreen from './Components/MyPlanScreen';
+import CashWithdrawal from './Components/ringu/CashWithdrawal';
+import Updatemodel from './Components/ringu/Updatemodel';
+import InviteFriend from './Components/ringu/InviteFriend';
 // import { Settings } from '';
 
 
 function App() {
+  const denominationsList = [
+    {
+      id: 1,
+      value: 50,
+    },
+    {
+      id: 2,
+      value: 100,
+    },
+    {
+      id: 3,
+      value: 200,
+    },
+    {
+      id: 4,
+      value: 500,
+    },
+  ]
+  
   return (
     <>
       {/* <Home/> */}
@@ -60,6 +82,9 @@ function App() {
         <Route exact path="/RecurringDeposit" element={<RecurringDeposit/>} />
         <Route exact path="/General" element={<General/>} />
         <Route exact path="/Account" element={<Account/>} />
+        <Route exact path="/withdraw" element={<CashWithdrawal />} />
+        <Route exact path="/update" element={<Updatemodel/>} />
+        <Route exact path="/invite" element={<InviteFriend/>} />
 
         </Routes>
       

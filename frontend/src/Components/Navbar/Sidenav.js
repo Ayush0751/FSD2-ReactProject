@@ -8,6 +8,7 @@ import "@fortawesome/react-fontawesome";
 import Feed from '../Discover/Feed';
 // import styles2 from "../Assets/css/LoginPage.module.css"
 import AddFundPopUp from '../AddFund/AddFundPopUp'
+import FooterDash from "../FooterDash.js"
 import { useState } from "react";
 
 <link
@@ -101,12 +102,12 @@ function Sidenav() {
           </div>
           <div className={styles1.contents_2}>
             <p>More</p>
-            <a href="/">
+            <Link to="/withdraw">
               <i className="fa-solid fa-database"></i> Withraw Funds
-            </a>
-            <a href="/">
+            </Link>
+            <Link to="/invite">
               <i className="fa-solid fa-bullhorn"></i> Invite Friends
-            </a>
+            </Link>
             <a href="/">
               <i className="fa-solid fa-circle-question"></i> Help
             </a>
@@ -124,6 +125,9 @@ function Sidenav() {
         <AddFundPopUp close = {onClose}/>
         
       }
+      {/* <div className={styles1.footerzz}>
+
+      </div> */}
     </>
     
   );

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import accountStyles from "../Assets/css/Account.module.css";
 import { FaChevronLeft } from "react-icons/fa";
-import Updatemodel from './Updatemodel'
+import Updatemodel from '../Components/ringu/Updatemodel'
 import Navbar from "./Navbar/Navbar";
 
 const Account = () => {

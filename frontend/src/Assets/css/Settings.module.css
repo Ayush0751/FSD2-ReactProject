@@ -50,19 +50,10 @@
     font-weight:lighter;
     font-size: 35px;
     text-align:left;
-    color:white;
-    background-color: #044599;
+    color:var(--bs-blue);
+    background-color: var(--bs-background);
     height: 165px;
 }
-
-/* hr {
-    width: 85%;
-    border: 0;
-    padding-left: 500px;
-    border-bottom: 5px solid rgb(6, 6, 6);
-    border-radius: 5px;
-    margin: 20px auto;
-} */
 
 .setbody {
     padding-left: 115px;
@@ -82,32 +73,33 @@
     width: 30%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #CBDCCB;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .setgeneral h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .setgeneral p {
     padding: 50px 10px 10px 10px;
     font-size: 18px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
-
-
 
 .setaccount {
     /* height: 300px; */
@@ -115,29 +107,33 @@
     float: left;
     position: relative;
     left: 55px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    background-color: #CBDCCB;
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .setaccount h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .setaccount p {
     padding: 50px 10px 10px 10px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .settrade {
@@ -146,29 +142,32 @@
     width: 30%;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #CBDCCB;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .settrade h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .settrade p {
     padding: 50px 10px 10px 10px;
     font-size: 18px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .setbottom
@@ -189,27 +188,31 @@
     float: left;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #CBDCCB;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .setnoti h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .setnoti p {
     padding: 50px 10px 10px 10px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .setprivacy {
@@ -218,29 +221,33 @@
     float: left;
     position: relative;
     left: 55px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    background-color: #CBDCCB;
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .setprivacy h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .setprivacy p {
     padding: 50px 10px 10px 10px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .setdeposit {
@@ -249,27 +256,31 @@
     float: right;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:lighter;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #CBDCCB;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    background-color:var(--bs-background) ;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 .setdeposit h2 {
     padding: 10px;
-    background-color: #17a2b8;
+    background-image: linear-gradient(to left,#009FFD,#2A2A72);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:white ;
 }
 
 .setdeposit p {
     padding: 50px 10px 10px 10px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     height: 150px;
     font-size: 18px;
     font-weight: lighter;
     word-spacing: 2px;
     letter-spacing: 0.5px;
+    color: white;
 }
 
 .icon {
@@ -279,8 +290,9 @@
     position: relative;
     bottom: 30px;
     right: 30px;
-    background-color: #CBDCCB;
+    background-color: var(--bs-background);
     border-radius: 27px;
+    color: white;
 }
 
 .setgeneral button {
@@ -290,8 +302,9 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 
 .setaccount button {
@@ -301,8 +314,9 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 
 .settrade button {
@@ -312,8 +326,9 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 
 .setprivacy button {
@@ -323,8 +338,9 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 
 .setdeposit button {
@@ -334,8 +350,9 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 
 .setnoti button {
@@ -345,11 +362,16 @@
     bottom: 30px;
     right: 30px;
     border-radius: 30px;
-    background-color: #CBDCCB;
-    border: #CBDCCB;
+    background-color: var(--bs-background);
+    border: var(--bs-background);
+    color: white;
 }
 .arrow {
     font-size: 40px;
     padding: 5px;
     margin-bottom: 5px;
+}
+
+.arrow:hover{
+    cursor: pointer;
 }
