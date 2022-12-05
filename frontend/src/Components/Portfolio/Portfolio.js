@@ -135,50 +135,50 @@ function Portfolio() {
                   <th>Check</th>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <img src={require("../../Assets/img/greydp.png")} alt="" />
                     <span>Ayush Singla</span>
                   </td>
-                  <td>1600</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>
                     <a href="/">Close</a>
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <img src={require("../../Assets/img/greydp.png")} alt="" />
                     <span>Ayush Singla</span>
                   </td>
-                  <td>1600</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>
                     <a href="/">Close</a>
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <img src={require("../../Assets/img/greydp.png")} alt="" />
                     <span>Ayush Singla</span>
                   </td>
-                  <td>1600</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>
                     <a href="/">Close</a>
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <img src={require("../../Assets/img/greydp.png")} alt="" />
                     <span>Ayush Singla</span>
                   </td>
-                  <td>1600</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>
                     <a href="/">Close</a>
                   </td>
                 </tr>
@@ -202,56 +202,56 @@ function Portfolio() {
                   <th>End Time</th>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <div className={styles.histImg}>
                       <img src={require("../../Assets/img/greydp.png")} alt="" />
                       <span>Ayush Singla</span>
                     </div>
                   </td>
-                  <td>1600</td>
-                  <td>2000</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>10:00PM 9 Feb</td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>2000</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <div className={styles.histImg}>
                       <img src={require("../../Assets/img/greydp.png")} alt="" />
                       <span>Ayush Singla</span>
                     </div>
                   </td>
-                  <td>1600</td>
-                  <td>2000</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>10:00PM 9 Feb</td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>2000</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <div className={styles.histImg}>
                       <img src={require("../../Assets/img/greydp.png")} alt="" />
                       <span>Ayush Singla</span>
                     </div>
                   </td>
-                  <td>1600</td>
-                  <td>2000</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>10:00PM 9 Feb</td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>2000</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td className={styles.tdimg}>
                     <div className={styles.histImg}>
                       <img src={require("../../Assets/img/greydp.png")} alt="" />
                       <span>Ayush Singla</span>
                     </div>
                   </td>
-                  <td>1600</td>
-                  <td>2000</td>
-                  <td>5%</td>
-                  <td>8:00AM 8 Feb</td>
-                  <td>10:00PM 9 Feb</td>
+                  <td className={styles.tdimg}>1600</td>
+                  <td className={styles.tdimg}>2000</td>
+                  <td className={styles.tdimg}>5%</td>
+                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
+                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
                 </tr>
               </table>
             </div>
