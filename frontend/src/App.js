@@ -14,8 +14,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MoneyInvest from './Components/MoneyInvest';
 import ViewAll from "./Components/ViewAll/ViewAll"
 import Settings from "./Components/Settings"
+import Privacy from "./Components/Privacy"
+import Notifications from "./Components/Notifications"
+import RecurringDeposit from "./Components/RecurringDeposit"
 import General from "./Components/General"
 import Account from './Components/Account';
+import Trading from './Components/Trading';
 import MyPlanScreen from './Components/MyPlanScreen';
 // import { Settings } from '';
 
@@ -50,6 +54,10 @@ function App() {
         <Route exact path="/CopyTrade" element={<MoneyInvest/>} />
         <Route exact path="/ViewAll" element={<ViewAll/>} />
         <Route exact path="/Settings" element={<Settings/>} />
+        <Route exact path="/Privacy" element={<Privacy/>} />
+        <Route exact path="/Notifications" element={<Notifications/>} />
+        <Route exact path="/Trading" element={<Trading/>} />
+        <Route exact path="/RecurringDeposit" element={<RecurringDeposit/>} />
         <Route exact path="/General" element={<General/>} />
         <Route exact path="/Account" element={<Account/>} />
 

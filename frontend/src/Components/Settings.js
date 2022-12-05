@@ -41,7 +41,8 @@ const Settings = () => {
                             <h2>Trading</h2>
                             <FaRegChartBar className={settingStyles.icon}/>
                             <p>Modify your core trading experience.</p>
-                            <button><FaChevronRight className={settingStyles.arrow}/></button>
+                            <Link to='/Trading'><button ><FaChevronRight className={settingStyles.arrow}/></button></Link>
+                            {/* <button><FaChevronRight className={settingStyles.arrow}/></button> */}
                         </div>
                     </div>
                     <div className={settingStyles.setbottom}>
@@ -49,19 +50,22 @@ const Settings = () => {
                             <h2>Notifications</h2>
                             <FaBell className={settingStyles.icon}/>
                             <p>Opt-in or out from any communication you receive.</p>
-                            <button><FaChevronRight className={settingStyles.arrow}/></button>
+                            <Link to='/notifications'><button ><FaChevronRight className={settingStyles.arrow}/></button></Link>
+                            {/* <button><FaChevronRight className={settingStyles.arrow}/></button> */}
                         </div>
                         <div className={settingStyles.setprivacy}>
                             <h2>Privacy</h2>
                             <FaLock className={settingStyles.icon}/>
                             <p>Control how others see you and your activity.</p>
-                            <button><FaChevronRight className={settingStyles.arrow}/></button>
+                            <Link to='/privacy'><button ><FaChevronRight className={settingStyles.arrow}/></button></Link>
+                            {/* <button><FaChevronRight className={settingStyles.arrow}/></button> */}
                         </div>
                         <div className={settingStyles.setdeposit}>
                             <h2>Recurring Deposits</h2>
                             <FaCoins className={settingStyles.icon}/>
                             <p>Set up or manage your automatic deposits.</p>
-                            <button><FaChevronRight className={settingStyles.arrow}/></button>
+                            <Link to='/recurringDeposit'><button ><FaChevronRight className={settingStyles.arrow}/></button></Link>
+                            {/* <button><FaChevronRight className={settingStyles.arrow}/></button> */}
                         </div>
                     </div>
                 </div>
