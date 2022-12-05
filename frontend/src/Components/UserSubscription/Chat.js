@@ -29,8 +29,9 @@ function Chat(props) {
         {/* <span></span> */}
         <p className={styles.chattingWith}>Chatting With {props.traderName}</p>
         {/* <hr /> */}
-        <hr />
-        <p className={`${styles.chat} ${styles.traderChat}`}>
+        {/* <hr /> */}
+        <p className={styles["chat"] + " " + styles["traderChat"]}>
+          {/* <p className={`${styles.chat} ${styles.traderChat}`}> */}
           <span className={styles.text}> Heyy!!</span>
         </p>
         <p className={`${styles.chat} ${styles.traderChat}`}>

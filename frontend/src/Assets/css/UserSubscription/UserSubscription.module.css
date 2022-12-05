@@ -48,7 +48,7 @@ body{
 .sepLine{
     position: relative;
     top: 86px;
-    opacity: 0.2;
+    opacity: 0;
 }
 
 .line{
