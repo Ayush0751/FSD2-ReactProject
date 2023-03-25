@@ -12,6 +12,7 @@ import LoadingScreen from "react-loading-screen";
 
 
 function Form(props) {
+  const [email, setemail] = useState(" ");
   const [name, setname] = useState(" ");
   const [pass, setpass] = useState(" ");
   const [repass, setrePass] = useState(" ");
@@ -61,6 +62,9 @@ function Form(props) {
     e.preventDefault();
   }
 
+  const emailInput=(event)=>{
+    setemail(event.target.value);
+  }
   const nameInput=(event)=>{
     setname(event.target.value);
   }
@@ -82,7 +86,7 @@ function Form(props) {
     const user = await axios.post(
       "http://localhost:8081/api/users/login",
       {
-        email: name,
+        email: email,
         password: pass,
       }
     );
@@ -103,6 +107,31 @@ function Form(props) {
     setLoadingState(false);
   }, []);
 
+
+  const handleRegister = async (e) => {
+    setLoadingState(true);
+    e.preventDefault();
+    console.log(name);
+    const user = await axios.post('http://localhost:8081/api/users/signup', {
+      name: name,
+      email:email,
+      password: pass
+    });
+    if(user.length === 0){
+      console.log('Signup failed!');
+    }
+    else{
+      console.log('Signup successful!');
+      setLoadingState(false);
+      navigateTo();
+    }
+  };
+  useEffect((e) => {
+    // temp(e, "cipla");
+
+    setLoadingState(false);
+  }, []);
+
   let [loadingState, setLoadingState] = useState(false);
 
   return (
@@ -110,10 +139,18 @@ function Form(props) {
     <>
       <img src = {require('../../Assets/images/149071.png')} alt="missing img" className={styles.userImg}></img>
       <form className={styles.form__group} >
-          <InputField value="" id = "username" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="User Name" fun={nameInput} />
+          <InputField value="" id = "email" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="E-Mail" fun={emailInput} />
+
+          {!props.isRegistered && (
+            <div>
+            <InputField id = "name" type= "name" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Name" fun={nameInput}/> 
+            </div>
+          )}
+
           <InputField id = "password" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Password" fun={passInput} />
           {!props.isRegistered && (
-            <InputField id = "confirm" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Confirm Password" fun={rePassInput}/>
+            <div>
+            <InputField id = "confirm" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Confirm Password" fun={rePassInput}/></div>
           )}
 
 
@@ -127,7 +164,7 @@ function Form(props) {
               </div>
             )}
             {!props.isRegistered && (
-              <Button classname ={styles1.button} text = " Register" onClick = {check}/>
+              <Button classname ={styles1.button} text = " Register" onClick = {handleRegister}/>
             )}
             
           {/* </div> */}
