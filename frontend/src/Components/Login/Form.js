@@ -5,7 +5,11 @@ import styles3 from "../../Assets/css/InputField.module.css"
 import InputField from "../InputField"
 import Button from "../Button"
 import data from "../data/data.json"
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+
+import axios from "axios";
+import LoadingScreen from "react-loading-screen";
+
 
 function Form(props) {
   const [name, setname] = useState(" ");
@@ -67,12 +71,46 @@ function Form(props) {
     setrePass(event.target.value);
   }
 
+
+  const navigate = useNavigate();
+  const navigateTo = () => navigate("/dashboard", { replace: true });
+  const handleSubmit = async (e, props) => {
+    console.log(name);
+    console.log(pass);
+    setLoadingState(true);
+    e.preventDefault();
+    const user = await axios.post(
+      "http://localhost:8081/api/users/login",
+      {
+        email: name,
+        password: pass,
+      }
+    );
+    if (user.length === 0) {
+      console.log("Login failed!");
+      return 0;
+    } else {
+      console.log("Login successful!");
+      // const history =useHistory();
+      setLoadingState(false);
+      navigateTo();
+    }
+  };
+
+  useEffect((e) => {
+    // temp(e, "cipla");
+
+    setLoadingState(false);
+  }, []);
+
+  let [loadingState, setLoadingState] = useState(false);
+
   return (
 
     <>
       <img src = {require('../../Assets/images/149071.png')} alt="missing img" className={styles.userImg}></img>
-      <form className={styles.form__group}>
-          <InputField id = "username" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="User Name" fun={nameInput} />
+      <form className={styles.form__group} >
+          <InputField value="" id = "username" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="User Name" fun={nameInput} />
           <InputField id = "password" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Password" fun={passInput} />
           {!props.isRegistered && (
             <InputField id = "confirm" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Confirm Password" fun={rePassInput}/>
@@ -83,7 +121,7 @@ function Form(props) {
             {props.isRegistered && (
               <div style ={{display:"flex",alignItems: "center",justifyContent: "center" }}>
                 <Link to="/DashBoard">
-                <Button classname ={styles1.button} text = " Login" onClick = {dta}/></Link>
+                <Button classname ={styles1.button} text = " Login" onClick={handleSubmit}/></Link>
                 <Link to="/Login">
                 <Button classname ={styles1.button} text = " Register" onClick = {props.notRegistered} /></Link>
               </div>

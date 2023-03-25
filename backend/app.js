@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const usersRoutes = require('./routes/users-routes');
-const postDocRoutes = require('./routes/postDoc-routes');
+// const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
 
 const app = express();
@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 
 app.use('/api/users', usersRoutes);
 // app.use('/api/places', placesRoutes);
-app.use('/api/postDoc', postDocRoutes);
+// app.use('/api/postDoc', postDocRoutes);
 
 app.use((req, res, next) => {
   const error = new HttpError('Could not find this route.', 404);
@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
   })
 
 mongoose.connect(
-    `mongodb+srv://Ayush0751:clusture0751@cluster0.nhdkbx9.mongodb.net/studentHubLogin?retryWrites=true&w=majority`
+    `mongodb+srv://Ayush0751:clusture0751@cluster0.nhdkbx9.mongodb.net/zrading2?retryWrites=true&w=majority`
     )
     .then(() => {
         console.log("connected");
