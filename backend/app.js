@@ -4,12 +4,14 @@ const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const morgan = require("morgan");
 
 const usersRoutes = require('./routes/users-routes');
 // const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
 
 const app = express();
+app.use(morgan("combined"));
 
 app.use(bodyParser.json());
 
