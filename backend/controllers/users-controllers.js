@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const HttpError = require("../models/http-error");
 const { User, Copy, History } = require("../models/user");
-const async = require("hbs/lib/async");
+// const async = require("hbs/lib/async");
 
 const getUsers = async (req, res, next) => {
   let users;
