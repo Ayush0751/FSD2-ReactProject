@@ -6,7 +6,7 @@ import { useState } from "react";
 import { UserData } from "../Data";
 import { Chart as ChartJS } from "chart.js/auto";
 import Navbar from '../Navbar/Navbar';
-import { Link } from "react-router-dom";
+import { Link , useLocation} from "react-router-dom";
 import AddFundPopUp from '../AddFund/AddFundPopUp'
 
 
@@ -35,10 +35,14 @@ export default function HomeBody() {
   const onClose =()=> {
     setisClicked(false);
   }
-  
+
+  const loc = useLocation();
+  const {state} = loc;
+  const { name , email} = state;
+
   return (
     <div>
-      <Navbar/>
+      <Navbar name = {name}/>
       <div className={styles2.container1}>
         <div className={styles2.tile1}>
           <div className={styles2.note}>

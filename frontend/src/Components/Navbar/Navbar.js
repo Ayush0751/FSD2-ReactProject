@@ -8,7 +8,7 @@ import Feed from '../Discover/Feed';
 import { Link } from "react-router-dom";
 // import img from "../../Assets/images/NavBar/defaultDP"
 
-export default function Navbar() {
+export default function Navbar(props) {
   const handle = useFullScreenHandle();
   return (
     <FullScreen handle={handle}>
@@ -103,7 +103,7 @@ export default function Navbar() {
           <div className={styles.profile }>
             <img src={require("../../Assets/images/Navbar/defaultDP.png")} alt="" />
             <i className="fa-solid fa-caret-down drp-dwn"></i>
-            <p>Sanu Das</p>
+            <p>{props.name}</p>
             <div className={styles.updropdown}>
               <div className={styles.updropdown_content}>
                 <Link to="/Account">

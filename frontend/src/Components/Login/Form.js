@@ -81,7 +81,7 @@ function Form(props) {
 
 
   const navigate = useNavigate();
-  const navigateTo = () => navigate("/dashboard", { replace: true });
+  const navigateTo = () => navigate("/dashboard", {state : {name :name , email: email}});
   const handleSubmit = async (e, props) => {
     console.log(name);
     console.log(pass);
