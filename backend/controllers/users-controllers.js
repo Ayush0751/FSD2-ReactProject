@@ -1,9 +1,8 @@
-
 const { validationResult } = require("express-validator");
 const mongoose = require("mongoose");
 
 const HttpError = require("../models/http-error");
-const { User, Copy, History } = require("../models/user");
+const { User, Copy, History,Traders } = require("../models/user");
 const async = require("hbs/lib/async");
 
 const getUsers = async (req, res, next) => {
@@ -28,7 +27,7 @@ const signup = async (req, res, next) => {
     );
   }
 
-  const { name, email, password,imgName } = req.body;
+  const { name, email, password, imgName } = req.body;
   // console.log(req.file);
   console.log(req.body);
 
@@ -54,9 +53,9 @@ const signup = async (req, res, next) => {
   // console.log(image);
   const createdUser = new User({
     name,
-    email,  
-    image:imgName,
-    password
+    email,
+    image: imgName,
+    password,
   });
   console.log(createdUser);
 
@@ -112,16 +111,18 @@ const sendCopy = async (req, res, next) => {
       new HttpError("Invalid inputs passed, please check your data.", 422)
     );
   }
-  const { amount, stoploss, stopgain } = req.body;
+  const { amount, stoploss, stopgain,name } = req.body;
   console.log({
     stoploss: stoploss,
     stopgain: stopgain,
     amount: amount,
+    name:name
   });
   const createCopy = new Copy({
     amount,
     stoploss,
     stopgain,
+    name
   });
   try {
     createCopy.save();
@@ -161,14 +162,15 @@ const getOrders = async (req, res, next) => {
   // console.log(res);
   // return res;
 };
-const historyAdd = (amount, orderstart) => {
+const historyAdd = (amount, orderstart,name) => {
   const createHistory = new History({
     amount,
     orderstart,
+    name
   });
   try {
     createHistory.save();
-    alert('history created')
+    alert("history created");
   } catch (error) {
     res.status(500).json({ error: error.message });
     return next(error);
@@ -180,27 +182,64 @@ const deleteOrder = async (req, res, next) => {
   console.log(id, "id");
   try {
     const histdata = await Copy.findById(id);
-    const { amount, ordertime } = histdata;
-    console.log(histdata,"histdata");
-    historyAdd(amount, ordertime);
+    const { amount, ordertime,name } = histdata;
+    console.log(histdata, "histdata");
+    historyAdd(amount, ordertime,name);
+
+    console.log(result, "result");
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+
+
+  try {
     const result = await Copy.findByIdAndDelete(id);
+
     console.log(result, "result");
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
-const getHistory= async(req,res,next)=>{
+const getHistory = async (req, res, next) => {
   let result;
   console.log("h");
   try {
     result = await History.find();
     console.log("history passed");
   } catch (error) {
-    res.status(500).json({ error: error.message })
+    res.status(500).json({ error: error.message });
     // return next(error);
   }
-  console.log(result);
+  console.log(result, "result");
   res.json({ result });
+};
+const getTraders = async (req, res, next) => {
+  let result;
+  console.log("hola");
+  try {
+    // const collection = await mongoose.db("zrading2").collection("traders");
+    result = await Traders.find();
+    console.log("history passed");
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+    return next(error);
+  }
+  console.log(result, "result5555");
+  res.json({ result });
+};
+
+const getUser=async(req,res,next)=>{
+  const email = req.params.email;
+  let result;
+  console.log(email, "email");
+  try {
+     result = await User.findOne({email:email});
+    console.log(result, "userData");
+
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+  res.json({result})
 }
 exports.getUsers = getUsers;
 exports.signup = signup;
@@ -208,3 +247,6 @@ exports.login = login;
 exports.sendCopy = sendCopy;
 exports.getOrders = getOrders;
 exports.deleteOrder = deleteOrder;
+exports.getHistory = getHistory;
+exports.getTraders = getTraders;
+exports.getUser = getUser;

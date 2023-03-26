@@ -9,20 +9,26 @@ import LineChart from "../LineChart";
 import Navbar from "../Navbar/Navbar";
 import FooterDash from "../FooterDash";
 import handlecopy from "./GetOrders";
+import handleHistory from "./GetHistory";
 import DeleteOrder from "./DeleteOrder";
 import async from "hbs/lib/async";
 import { Link } from "react-router-dom";
 import { useDataProvider, useRefresh } from "react-admin";
 function Portfolio() {
   const [orderData, setOrderData] = useState("");
+  const [histData, setHistData] = useState("");
   // const refresh = useRefresh();
+  const [flag,setFlag]=useState(false)
   useEffect(() => {
     async function fun() {
       const pp = await handlecopy();
+      const pp2 = await handleHistory();
       setOrderData(pp);
+      setHistData(pp2);
     }
     fun();
-  }, [ ]);
+    setFlag(false)
+  }, [flag]);
   console.log(orderData, "orderData");
   // handlecopy()
   const [userData, setUserData] = useState({
@@ -81,6 +87,13 @@ function Portfolio() {
     var time = now.toLocaleTimeString();
     // console.log(date + ' ' + time)
     return time;
+  };
+  const dateHandler2 = (date) => {
+    var now = new Date(date);
+    var date = now.toLocaleDateString();
+    var time = now.toLocaleTimeString();
+    // console.log(date + ' ' + time)
+    return (date + ' ' + time);
   };
   const dateHandler = (date) => {
     var now = new Date(date);
@@ -175,7 +188,7 @@ function Portfolio() {
                             src={require("../../Assets/img/greydp.png")}
                             alt=""
                           />
-                          <span>Ayush Singla</span>
+                          <span>{item.name}</span>
                         </td>
                         <td className={styles.tdimg}>{item.amount}</td>
                         <td className={styles.tdimg}>5%</td>
@@ -190,7 +203,7 @@ function Portfolio() {
                             to="#"
                             onClick={() => {
                               DeleteOrder(item._id);
-                              // refresh();
+                              setFlag(true);
                             }}
                           >
                             Close
@@ -218,23 +231,27 @@ function Portfolio() {
                   <th>Start Time</th>
                   <th>End Time</th>
                 </tr>
-                {}
-                <tr>
-                  <td className={styles.tdimg}>
-                    <div className={styles.histImg}>
-                      <img
-                        src={require("../../Assets/img/greydp.png")}
-                        alt=""
-                      />
-                      <span>Ayush Singla</span>
-                    </div>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>2000</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
-                </tr>
+                {histData?.length > 0 &&
+                  histData.map((item, index) => {
+                    return (
+                      <tr>
+                        <td className={styles.tdimg}>
+                          <div className={styles.histImg}>
+                            <img
+                              src={require("../../Assets/img/greydp.png")}
+                              alt=""
+                            />
+                            <span>{item.name}</span>
+                          </div>
+                        </td>
+                        <td className={styles.tdimg}>{item.amount}</td>
+                        <td className={styles.tdimg}>2000</td>
+                        <td className={styles.tdimg}>5%</td>
+                        <td className={styles.tdimg}>{dateHandler2(item.orderstart)}</td>
+                        <td className={styles.tdimg}>{dateHandler2(item.orderend)}</td>
+                      </tr>
+                    );
+                  })}
               </table>
             </div>
           </div>

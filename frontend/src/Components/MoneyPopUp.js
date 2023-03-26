@@ -10,6 +10,8 @@ import async from "hbs/lib/async";
 import axios from "axios";
 
 function MoneyPopUp(props) {
+  const{name}=props
+  console.log(name,"hiiiiiiiiiiiiiiiii");
   const [amt, setAmt] = useState("0");
   const updateVal = (event) => {
     setAmt(event.target.value);
@@ -29,12 +31,14 @@ const [flag,setFlag] = useState(false);
         amount: amt,
         stoploss: slRef.current.value,
         stopgain: sgRef.current.value,
+        name:name
       }
     );
     console.log({
       amt,
       stopLoss: slRef.current.value,
-      stopGain: sgRef.current.value
+      stopGain: sgRef.current.value,
+      name:name
     })
     if (order.length === 0) {
       console.log("Order Failed!");

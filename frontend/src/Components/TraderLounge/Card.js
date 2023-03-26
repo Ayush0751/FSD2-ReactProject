@@ -7,7 +7,8 @@ import React, { useState } from "react";
 import styles1 from "../../Assets/css/LoginPage.module.css";
 import MoneyPopUp from "../MoneyPopUp";
 // import MoneyPopUp from './MoneyPopUp'
-function Card() {
+function Card(props) {
+  const { name, trader_id, address, rating, bio, copiers, age,profit } = props;
   const [isClicked, setisClicked] = useState(false);
   const onclck = () => {
     setisClicked(true);
@@ -29,12 +30,12 @@ function Card() {
                   <div className={styles["front__face-photo"]}></div>
                   <div className={styles["front__text"]}>
                     <span className={styles["front__text-header"]}>
-                      Singla Das |
+                      {name} |
                     </span>
-                    <span className={styles["m-username--star"]}>2★</span>
+                    <span className={styles["m-username--star"]}>{rating}★</span>
                     <p className={styles["front__text-para"]}>
                       <i className={"fas fa-map-marker-alt front-icons"}></i>
-                      Patna
+                      {address}
                     </p>
                     <p>------------------------------</p>
                   </div>
@@ -50,27 +51,25 @@ function Card() {
                       </span>
                       <div className={styles["back-details"]}>
                         <div className={styles["back-userid"]}>
-                          <span className={styles["userid"]}>krsanu01,</span>
-                          <span className={styles["userage"]}>17</span>
+                          <span className={styles["userid"]}>{trader_id},</span>
+                          <span className={styles["userage"]}>{age}</span>
                           <span className={styles["age"]}>(Age)</span>
                         </div>
                         <div className={styles["user-bio"]}>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Ut corporis voluptate libero temporibus, minus
-                          delectus
+                          {bio}
                         </div>
                         <hr className={styles["card-line"]} />
                         <div className={styles["user-avgprofit"]}>
                           <i className={"fa-solid fa-arrow-up"}></i>{" "}
                           <span className={styles["profit-percent"]}>
-                            33.33%
+                            {profit}%
                           </span>
                           <span className={styles["profit-detail"]}>
                             (Profit in last Month)
                           </span>
                         </div>
                         <div className={styles["user-copiers"]}>
-                          <span className={styles["num-copier"]}>200</span>{" "}
+                          <span className={styles["num-copier"]}>{copiers}</span>{" "}
                           <span className={styles["copier"]}>Copiers</span>{" "}
                           <span className={styles["copier-detail"]}>
                             (In last 10 days)
@@ -100,7 +99,7 @@ function Card() {
         </div>
       </div>
       {
-        isClicked && <MoneyPopUp close={onClose} />
+        isClicked && <MoneyPopUp close={onClose} name={name} />
         // <MoneyPopUp/>
       }
     </>

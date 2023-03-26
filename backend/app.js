@@ -12,6 +12,7 @@ const swaggerJsDoc = require("swagger-jsdoc")
 
 const usersRoutes = require('./routes/users-routes');
 const copyRoutes = require('./routes/copy-routes');
+const traderRoutes = require('./routes/traders-routes');
 // const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
 
@@ -59,6 +60,7 @@ app.use((req, res, next) => {
 app.use(express.static("public"))
 app.use('/api/users', usersRoutes);
 app.use('/api/copy', copyRoutes);
+app.use('/api/trader', traderRoutes);
 // app.use('/api/places', placesRoutes);
 // app.use('/api/postDoc', postDocRoutes);
 

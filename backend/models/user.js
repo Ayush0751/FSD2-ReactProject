@@ -24,9 +24,11 @@ const copySchema = new Schema({
     required: true,
     default: Date.now
   },
+  name:{type:String, required:true}
 });
 const historySchema = new Schema({
   amount: { type: Number, required: true },
+  name: { type: String, required: true },
   
   orderend: {
     type: Date,
@@ -38,9 +40,40 @@ const historySchema = new Schema({
     required:true
   }
 });
+const traderSchema = new Schema({
+  name: { type: String, required: true },
+  trader_id: { type: String, required: true },
+  
+  age: {
+    type: String,
+    required: true,
+    // default: Date.now
+  },
+  bio:{
+    type:String,
+    required:true
+  },
+  rating:{
+    type:String,
+    required:true
+  },
+  address:{
+    type:String,
+    required:true
+  },
+  copiers:{
+    type:String,
+    required:true
+  },
+  profits:{
+    type:String,
+    required:true
+  },
+});
 
 // userSchema.plugin(uniqueValidator);
 const User=mongoose.model("User", userSchema);
 const Copy=mongoose.model("Copy", copySchema);
 const History=mongoose.model("History", historySchema);
-module.exports = {User,Copy,History}
+const Traders=mongoose.model("trader", traderSchema);
+module.exports = {User,Copy,History,Traders}

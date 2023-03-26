@@ -42,7 +42,7 @@ export default function HomeBody() {
 
   return (
     <div>
-      <Navbar name = {name}/>
+      <Navbar name = {name} email={email}/>
       <div className={styles2.container1}>
         <div className={styles2.tile1}>
           <div className={styles2.note}>

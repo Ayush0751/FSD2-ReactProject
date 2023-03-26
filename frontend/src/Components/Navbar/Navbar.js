@@ -3,12 +3,37 @@ import styles from "../../Assets/css/Navbar/Navbar.module.css";
 // import {showMenu} from "./Sidenav"
 import "@fortawesome/react-fontawesome";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import { useState,useEffect } from "react";
+
 import {showMenu,Sidenav} from "./Sidenav";
 import Feed from '../Discover/Feed';
 import { Link } from "react-router-dom";
+import axios from "axios";
 // import img from "../../Assets/images/NavBar/defaultDP"
 
 export default function Navbar(props) {
+  const {email}=props
+  const [userName,setUserName]=useState('')
+  const getDetailByEmail =  async() => {
+    let data;
+    try {
+        console.log("hii1");
+        const order = await ( axios.get(`http://localhost:8081/api/users/userDetails/${email}`));
+        console.log("hiiiiiiiiiiiiiiiiiiiiii");
+        console.log(order.data.result, "user");
+        data=order.data.result
+      } catch (error) {
+        // console.error("errorfsfsf");
+        console.error(error);
+      }
+      setUserName (data.name);
+    
+
+  };
+
+  useEffect(() => {
+    getDetailByEmail()
+  }, []);
   const handle = useFullScreenHandle();
   return (
     <FullScreen handle={handle}>
@@ -103,7 +128,7 @@ export default function Navbar(props) {
           <div className={styles.profile }>
             <img src={require("../../Assets/images/Navbar/defaultDP.png")} alt="" />
             <i className="fa-solid fa-caret-down drp-dwn"></i>
-            <p>{props.name}</p>
+            <p>{userName}</p>
             <div className={styles.updropdown}>
               <div className={styles.updropdown_content}>
                 <Link to="/Account">
