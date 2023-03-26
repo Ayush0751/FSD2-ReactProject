@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import styles from "../../Assets/css/Discover/Feed.module.css";
 import Post from "./Post"
 import Copiers from "./Copiers"
@@ -6,6 +6,14 @@ import Traders from "./Traders"
 import Navbar from "../Navbar/Navbar";
 
 function Feed(props) {
+  const [newPost, setnewPost] = useState("");
+  const handlePost=(e) =>{
+    setnewPost(e.target.value);
+    console.log(newPost);
+  }
+  const handlePostSubmit = ( )=>{
+    console.log(newPost);
+  }
   return (
     <>
     <Navbar/>
@@ -20,15 +28,16 @@ function Feed(props) {
                 />
               </div>
               <div className={styles["textAr"]}>
-                <form action="" method="POST">
+                <form action="">
                   <input
                     size="50"
                     type="text"
                     name="post_text"
                     placeholder="What's on your mind"
+                    onChange={handlePost}
                   />
                   <br />
-                  <button>Post</button>
+                  <button onClick={handlePostSubmit}>Post</button>
                 </form>
               </div>
             </div>

@@ -1,3 +1,7 @@
+// const fs = require('fs');
+// const path = require('path');
+
+
 const { validationResult } = require('express-validator');
 
 const HttpError = require('../models/http-error');
@@ -25,7 +29,9 @@ const signup = async (req, res, next) => {
     );
   }
 
-  const { name, email, password } = req.body;
+  const { name, email, password,imgName } = req.body;
+  // console.log(req.file);
+  console.log(req.body);
 
   let existingUser;
   try {
@@ -45,11 +51,12 @@ const signup = async (req, res, next) => {
     );
     return next(error);
   }
-
+  console.log("hiiii");
+  // console.log(image);
   const createdUser = new User({
     name,
-    email,
-    // image: req.file.path,
+    email,  
+    image:imgName,
     password
   });
   console.log(createdUser);

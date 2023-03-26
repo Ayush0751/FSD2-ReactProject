@@ -8,6 +8,7 @@ const morgan = require("morgan");
 const swaggerUI = require("swagger-ui-express")
 const swaggerJsDoc = require("swagger-jsdoc")
 
+
 const usersRoutes = require('./routes/users-routes');
 // const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
@@ -39,7 +40,7 @@ app.use(morgan("combined"));
 
 app.use(bodyParser.json());
 
-app.use('/uploads/documents', express.static(path.join('uploads', 'documents')));
+app.use('/uploads/images', express.static(path.join('uploads', 'images')));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -52,9 +53,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(express.static("public"))
 app.use('/api/users', usersRoutes);
 // app.use('/api/places', placesRoutes);
 // app.use('/api/postDoc', postDocRoutes);
+
+
 
 app.use((req, res, next) => {
   const error = new HttpError('Could not find this route.', 404);
@@ -62,11 +66,11 @@ app.use((req, res, next) => {
 });
 
 app.use((error, req, res, next) => {
-//   if (req.image) {
-//     fs.unlink(req.image.path, err => {
-//       console.log(err);
-//     });
-//   }
+  if (req.image) {
+    fs.unlink(req.image.path, err => {
+      console.log(err);
+    });
+  }
   if (res.headerSent) {
     return next(error);
   }

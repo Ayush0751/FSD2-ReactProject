@@ -15,6 +15,7 @@ function Form(props) {
   const [email, setemail] = useState(" ");
   const [name, setname] = useState(" ");
   const [pass, setpass] = useState(" ");
+  const [img, setimg] = useState(" ");
   const [repass, setrePass] = useState(" ");
   const [err1, seterr1] = useState(false);
   const [err2, seterr2] = useState(false);
@@ -74,6 +75,9 @@ function Form(props) {
   const rePassInput=(event)=>{
     setrePass(event.target.value);
   }
+  // const imgInput=(event)=>{
+  //   setimg(event.target.value);
+  // }
 
 
   const navigate = useNavigate();
@@ -107,16 +111,22 @@ function Form(props) {
     setLoadingState(false);
   }, []);
 
+  
 
   const handleRegister = async (e) => {
     setLoadingState(true);
     e.preventDefault();
-    console.log(name);
-    const user = await axios.post('http://localhost:8081/api/users/signup', {
-      name: name,
-      email:email,
-      password: pass
-    });
+    console.log(selectedImage);
+    const formdata = new FormData();
+    formdata.append("name", name);
+    formdata.append("email", email);
+    formdata.append("image", selectedImage);
+    formdata.append("password", pass);
+    formdata.append("imgName", img);
+
+    const user = await axios.post('http://localhost:8081/api/users/signup', 
+      formdata
+    );
     if(user.length === 0){
       console.log('Signup failed!');
     }
@@ -133,6 +143,7 @@ function Form(props) {
   }, []);
 
   let [loadingState, setLoadingState] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
 
@@ -150,7 +161,19 @@ function Form(props) {
           <InputField id = "password" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Password" fun={passInput} />
           {!props.isRegistered && (
             <div>
-            <InputField id = "confirm" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Confirm Password" fun={rePassInput}/></div>
+              {/* <p className={styles.h1text}>Upload ID for Verification</p> */}
+              <InputField id = "confirm" type= "password" inputClass={styles3["form__field"]} lableClass={styles3["form__label"]} placeHolder="Confirm Password" fun={rePassInput}/>
+              <input
+        type="file"
+        name="myImage"
+        className={styles["phoneInputField"] + " " +styles["idInputField"]}
+        onChange={(event) => { 
+          setSelectedImage(event.target.files[0]);
+          setimg(event.target.files[0].name);
+        }}
+      />
+
+            </div>
           )}
 
 
