@@ -36,7 +36,7 @@
     height: 40vh;
   } */
 .phoneInputField{
-  display: inline;
+  display:inline;
   font-family: inherit;
   width: 100%;
   border: 0;
@@ -51,7 +51,7 @@
   color : white;
   background-color: rgb(0,0,0,0.4);
   border-radius: 5px;
-  width: 90%;
+  width: 44%;
 }
 
 .h1text{
