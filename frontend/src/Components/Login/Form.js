@@ -220,17 +220,19 @@ function Form(props) {
           </div>
         )}
         {!props.isRegistered && (
+              <div style ={{position:"relative",top:"60px" }}>
           <Button
             classname={styles1.button}
             text=" Register"
-            onClick={handleRegister}
+            onClick={handleRegister} 
           />
+              </div>
         )}
 
         {/* </div> */}
         <div>
           {err1 && !props.isRegistered && (
-            <div style={{ color: "red", margin: "0px" }}>
+            <div style={{ color: "red", margin: "0px",position:"relative" ,top:"60px"}}>
               ! Password not matching
             </div>
           )}

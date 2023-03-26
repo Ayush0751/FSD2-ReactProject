@@ -77,7 +77,7 @@ router.post('/login', usersController.login);
 router.get('/userDetails/:email', usersController.getUser);
 router.post('/copy-order', usersController.sendCopy);
 
-router.get('/historyOrders', usersController.getHistory);
+
 
 
 module.exports = router;

@@ -6,7 +6,7 @@ import styles3 from "../Assets/css/InputField.module.css";
 import InputField from "./InputField";
 import Slider from "./Slider";
 import CopyOrder from "./Functions/CopyOrder";
-import async from "hbs/lib/async";
+// import async from "hbs/lib/async";
 import axios from "axios";
 
 function MoneyPopUp(props) {

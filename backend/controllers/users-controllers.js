@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 
 const HttpError = require("../models/http-error");
 const { User, Copy, History,Traders } = require("../models/user");
-const async = require("hbs/lib/async");
+// const async = require("hbs/lib/async");
 
 const getUsers = async (req, res, next) => {
   let users;
@@ -219,7 +219,7 @@ const getTraders = async (req, res, next) => {
   try {
     // const collection = await mongoose.db("zrading2").collection("traders");
     result = await Traders.find();
-    console.log("history passed");
+    console.log("Trader passed");
   } catch (error) {
     res.status(500).json({ error: error.message });
     return next(error);

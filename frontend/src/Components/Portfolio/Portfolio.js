@@ -11,7 +11,7 @@ import FooterDash from "../FooterDash";
 import handlecopy from "./GetOrders";
 import handleHistory from "./GetHistory";
 import DeleteOrder from "./DeleteOrder";
-import async from "hbs/lib/async";
+// import async from "hbs/lib/async";
 import { Link } from "react-router-dom";
 import { useDataProvider, useRefresh } from "react-admin";
 function Portfolio() {
