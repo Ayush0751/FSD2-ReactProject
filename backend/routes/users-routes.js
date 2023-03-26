@@ -74,5 +74,7 @@ router.post(
 );
 
 router.post('/login', usersController.login);
+router.post('/copy-order', usersController.sendCopy);
+router.post(`/delete-order/id`, usersController.deleteOrder);
 
 module.exports = router;

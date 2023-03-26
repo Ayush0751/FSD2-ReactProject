@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "../../Assets/css/Portfolio/Portfolio.module.css";
 import { useState } from "react";
 import { UserData } from "../Data";
@@ -8,7 +8,23 @@ import { Chart as ChartJS } from "chart.js/auto";
 import LineChart from "../LineChart";
 import Navbar from "../Navbar/Navbar";
 import FooterDash from "../FooterDash";
+import handlecopy from "./GetOrders";
+import DeleteOrder from "./DeleteOrder";
+import async from "hbs/lib/async";
+import { Link } from "react-router-dom";
+import { useDataProvider, useRefresh } from "react-admin";
 function Portfolio() {
+  const [orderData, setOrderData] = useState("");
+  // const refresh = useRefresh();
+  useEffect(() => {
+    async function fun() {
+      const pp = await handlecopy();
+      setOrderData(pp);
+    }
+    fun();
+  }, [ ]);
+  console.log(orderData, "orderData");
+  // handlecopy()
   const [userData, setUserData] = useState({
     lavel: "Trade date:",
     labels: UserData.map((temp) => temp.TradeDate),
@@ -59,9 +75,23 @@ function Portfolio() {
     // element.toggle("slow", function ShowChart() {});
     // $(styles.portGraph).toggle("slow", function () {});
   }
+  const timeHandler = (date) => {
+    var now = new Date(date);
+    // var date = now.toLocaleDateString();
+    var time = now.toLocaleTimeString();
+    // console.log(date + ' ' + time)
+    return time;
+  };
+  const dateHandler = (date) => {
+    var now = new Date(date);
+    var date = now.toLocaleDateString();
+    // var time = now.toLocaleTimeString();
+    // console.log(date + ' ' + time)
+    return date;
+  };
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div id="forBlur">
         <section>
           <div className={styles.row}>
@@ -132,57 +162,43 @@ function Portfolio() {
                   <th>Trader</th>
                   <th>Amount Invested</th>
                   <th>Current ROI</th>
+                  <th>Date</th>
                   <th>Start Time</th>
                   <th>Check</th>
                 </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <img src={require("../../Assets/img/greydp.png")} alt="" />
-                    <span>Ayush Singla</span>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>
-                    <a href="/">Close</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <img src={require("../../Assets/img/greydp.png")} alt="" />
-                    <span>Ayush Singla</span>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>
-                    <a href="/">Close</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <img src={require("../../Assets/img/greydp.png")} alt="" />
-                    <span>Ayush Singla</span>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>
-                    <a href="/">Close</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <img src={require("../../Assets/img/greydp.png")} alt="" />
-                    <span>Ayush Singla</span>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>
-                    <a href="/">Close</a>
-                  </td>
-                </tr>
+                {orderData?.length > 0 &&
+                  orderData.map((item, index) => {
+                    return (
+                      <tr>
+                        <td className={styles.tdimg}>
+                          <img
+                            src={require("../../Assets/img/greydp.png")}
+                            alt=""
+                          />
+                          <span>Ayush Singla</span>
+                        </td>
+                        <td className={styles.tdimg}>{item.amount}</td>
+                        <td className={styles.tdimg}>5%</td>
+                        <td className={styles.tdimg}>
+                          {dateHandler(item.ordertime)}
+                        </td>
+                        <td className={styles.tdimg}>
+                          {timeHandler(item.ordertime)}
+                        </td>
+                        <td className={styles.tdimg}>
+                          <Link
+                            to="#"
+                            onClick={() => {
+                              DeleteOrder(item._id);
+                              // refresh();
+                            }}
+                          >
+                            Close
+                          </Link>
+                        </td>
+                      </tr>
+                    );
+                  })}
               </table>
             </div>
           </div>
@@ -202,49 +218,14 @@ function Portfolio() {
                   <th>Start Time</th>
                   <th>End Time</th>
                 </tr>
+                {}
                 <tr>
                   <td className={styles.tdimg}>
                     <div className={styles.histImg}>
-                      <img src={require("../../Assets/img/greydp.png")} alt="" />
-                      <span>Ayush Singla</span>
-                    </div>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>2000</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <div className={styles.histImg}>
-                      <img src={require("../../Assets/img/greydp.png")} alt="" />
-                      <span>Ayush Singla</span>
-                    </div>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>2000</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <div className={styles.histImg}>
-                      <img src={require("../../Assets/img/greydp.png")} alt="" />
-                      <span>Ayush Singla</span>
-                    </div>
-                  </td>
-                  <td className={styles.tdimg}>1600</td>
-                  <td className={styles.tdimg}>2000</td>
-                  <td className={styles.tdimg}>5%</td>
-                  <td className={styles.tdimg}>8:00AM 8 Feb</td>
-                  <td className={styles.tdimg}>10:00PM 9 Feb</td>
-                </tr>
-                <tr>
-                  <td className={styles.tdimg}>
-                    <div className={styles.histImg}>
-                      <img src={require("../../Assets/img/greydp.png")} alt="" />
+                      <img
+                        src={require("../../Assets/img/greydp.png")}
+                        alt=""
+                      />
                       <span>Ayush Singla</span>
                     </div>
                   </td>

@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -10,6 +11,7 @@ const swaggerJsDoc = require("swagger-jsdoc")
 
 
 const usersRoutes = require('./routes/users-routes');
+const copyRoutes = require('./routes/copy-routes');
 // const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
 
@@ -37,6 +39,7 @@ const app = express();
 app.use('/apiDocs', swaggerUI.serve, swaggerUI.setup(specs));
 
 app.use(morgan("combined"));
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -55,6 +58,7 @@ app.use((req, res, next) => {
 
 app.use(express.static("public"))
 app.use('/api/users', usersRoutes);
+app.use('/api/copy', copyRoutes);
 // app.use('/api/places', placesRoutes);
 // app.use('/api/postDoc', postDocRoutes);
 
@@ -77,11 +81,9 @@ app.use((error, req, res, next) => {
   res.status(error.code || 500);
   res.json({ message: error.message || 'An unknown error occurred!' });
 });
-
-
-
-
-
+// const usersController = require('./controllers/users-controllers');
+// const data1 = await usersController.getOrders()
+// console.log(data1);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   })
