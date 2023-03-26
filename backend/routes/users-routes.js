@@ -4,6 +4,55 @@ const { check } = require('express-validator');
 const usersController = require('../controllers/users-controllers');
 // const fileUpload = require('../middleware/file-upload');
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Register:
+ *       type: object
+ *       required:
+ *         - name
+ *         - email
+ *         - password
+ *       properties:
+ *         name:
+ *           type: string
+ *           description: Name of the user
+ *         email:
+ *           type: string
+ *           description: Email of the user
+ *         password:
+ *           type: string
+ *           description: Password given by user
+ *       example:
+ *         name: Ayush Singla
+ *         email: ayush.s20@iiits.in
+ *         password: password_0.0
+ */
+
+/**
+ * @swagger
+ * /api/users/signup:
+ *   post:
+ *     summary: Register a new User
+ *     tags: [User]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/Register'
+ *     responses:
+ *       200:
+ *         description: The book was successfully created
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/Register'
+ *       500:
+ *         description: Some server error
+ */
+
 const router = express.Router();
 
 router.get('/', usersController.getUsers);

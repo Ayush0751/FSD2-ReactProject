@@ -5,12 +5,36 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const morgan = require("morgan");
+const swaggerUI = require("swagger-ui-express")
+const swaggerJsDoc = require("swagger-jsdoc")
 
 const usersRoutes = require('./routes/users-routes');
 // const postDocRoutes = require('./routes/postDoc-routes');
 const HttpError = require('./models/http-error');
 
+const options = {
+	definition: {
+		openapi: "3.0.0",
+		info: {
+			title: "Trading API",
+			version: "1.0.0",
+			description: "A Express Library API for all traders",
+		},
+		servers: [
+			{
+				url: "http://localhost:8081",
+			},
+		],
+	},
+	apis: ["./routes/*.js"],
+};
+
+const specs = swaggerJsDoc(options);
+
 const app = express();
+
+app.use('/apiDocs', swaggerUI.serve, swaggerUI.setup(specs));
+
 app.use(morgan("combined"));
 
 app.use(bodyParser.json());
