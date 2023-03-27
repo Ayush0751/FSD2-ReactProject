@@ -38,11 +38,11 @@ export default function HomeBody() {
 
   const loc = useLocation();
   const {state} = loc;
-  const { name , email} = state;
+  // const { name , email} = state;
 
   return (
     <div>
-      <Navbar name = {name} email={email}/>
+      <Navbar/>
       <div className={styles2.container1}>
         <div className={styles2.tile1}>
           <div className={styles2.note}>

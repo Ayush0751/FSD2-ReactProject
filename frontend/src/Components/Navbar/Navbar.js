@@ -31,9 +31,9 @@ export default function Navbar(props) {
 
   };
 
-  useEffect(() => {
-    getDetailByEmail()
-  }, []);
+  // useEffect(() => {
+  //   getDetailByEmail()
+  // }, []);
   const handle = useFullScreenHandle();
   return (
     <FullScreen handle={handle}>
@@ -128,7 +128,7 @@ export default function Navbar(props) {
           <div className={styles.profile }>
             <img src={require("../../Assets/images/Navbar/defaultDP.png")} alt="" />
             <i className="fa-solid fa-caret-down drp-dwn"></i>
-            <p>{userName}</p>
+            <p>Sanu Das</p>
             <div className={styles.updropdown}>
               <div className={styles.updropdown_content}>
                 <Link to="/Account">
