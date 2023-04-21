@@ -102,7 +102,7 @@ app.get('/', (req, res) => {
   })
 
 mongoose.connect(
-    `mongodb+srv://Ayush0751:clusture0751@cluster0.nhdkbx9.mongodb.net/zrading2?retryWrites=true&w=majority`
+    `<mongo-URL>`
     )
     .then(() => {
         console.log("connected");
