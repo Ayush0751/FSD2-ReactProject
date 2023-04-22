@@ -20,6 +20,8 @@ jobs:
           npm i express
           npm i morgan
           npm i swagger-jsdoc
+          npm i mongoose
+          npm i swagger-ui-express
           
       - name: run backend
         run: |
