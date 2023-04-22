@@ -27,8 +27,4 @@ jobs:
           npm i multer
           npm i react-scripts
           
-      - name: run frontend
-        run: |
-          cd frontend
-          npm start
 
