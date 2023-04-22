@@ -22,6 +22,8 @@ jobs:
           npm i swagger-jsdoc
           npm i mongoose
           npm i swagger-ui-express
+          npm i express-validator
+          npm i uuid
           
       - name: run backend
         run: |
