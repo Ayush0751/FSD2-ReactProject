@@ -24,10 +24,8 @@ function Post(props) {
           <p>{props.postText} </p>
         </div>
         <div className={styles["postImage"]}>
-          <img
-            src={require("../../Assets/images/Discover/".concat(
-              props.postImage
-            ))}
+        <img
+            src={"http://localhost:8081/"+props.postImage}
             alt=""
           />
           {/* <img

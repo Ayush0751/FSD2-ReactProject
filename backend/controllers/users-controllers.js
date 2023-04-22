@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const HttpError = require("../models/http-error");
 const { User, Copy, History,Traders } = require("../models/user");
 // const async = require("hbs/lib/async");
+const Post = require("../models/post")
 
 const getUsers = async (req, res, next) => {
   let users;
@@ -241,6 +242,53 @@ const getUser=async(req,res,next)=>{
   }
   res.json({result})
 }
+
+
+const getPost = async (req, res, next) => {
+  let result;
+  console.log("h");
+  result = await Post.find({}).sort({ createdAt: -1 });
+  console.log(result,"holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+  try {
+    console.log("post details fetched");
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+    // return next(error);
+  }
+  console.log(result, "result");
+  res.json({ result });
+};
+
+
+const postCreate = (req, res) => {
+  // console.log(req.body);
+  const { postText, postImageName } = req.body;
+  console.log("hi20212");
+  console.log(postText);
+  console.log(postImageName);
+  const post = new Post({
+    postText,
+    postImage: postImageName,
+  });
+  post
+    .save()
+    .then((result) => {
+      res.redirect("/discover");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+
+
+
+
+
+
+
+
+
 exports.getUsers = getUsers;
 exports.signup = signup;
 exports.login = login;
@@ -250,3 +298,6 @@ exports.deleteOrder = deleteOrder;
 exports.getHistory = getHistory;
 exports.getTraders = getTraders;
 exports.getUser = getUser;
+
+exports.getPost = getPost;
+exports.postCreate = postCreate;
