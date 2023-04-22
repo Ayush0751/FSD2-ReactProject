@@ -14,6 +14,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: install cors
+        run: |
+          npm i cors
+          
       - name: run backend
         run: |
           cd backend
