@@ -26,11 +26,6 @@ jobs:
           npm i uuid
           npm i multer
           
-      - name: run backend
-        run: |
-          cd backend
-          node app.js
-          
       - name: run frontend
         run: |
           cd frontend
