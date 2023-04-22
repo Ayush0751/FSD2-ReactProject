@@ -14,7 +14,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build and Compile
+      - name: run backend
         run: |
-          # Insert build and compile commands here
+          cd .\backend\
+          node app.js
+          
+      - name: run frontend
+        run: |
+          cd .\frontend\
+          npm start
 
