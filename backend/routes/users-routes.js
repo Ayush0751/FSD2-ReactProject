@@ -1,9 +1,9 @@
-const express = require('express');
-const { check } = require('express-validator');
+const express = require('express')
+const { check } = require('express-validator')
 
-const usersController = require('../controllers/users-controllers');
+const usersController = require('../controllers/users-controllers')
 // const fileUpload = require('../middleware/file-upload');
-const upload = require('../middleware/upload');
+const upload = require('../middleware/upload')
 
 /**
  * @swagger
@@ -54,9 +54,9 @@ const upload = require('../middleware/upload');
  *         description: Some server error
  */
 
-const router = express.Router();
+const router = express.Router()
 
-router.get('/', usersController.getUsers);
+router.get('/', usersController.getUsers)
 
 router.post(
   '/signup',
@@ -71,14 +71,13 @@ router.post(
     check('password').isLength({ min: 6 })
   ],
   usersController.signup
-);
+)
 
-router.post('/login', usersController.login);
-router.get('/userDetails/:email', usersController.getUser);
-router.post('/copy-order', usersController.sendCopy);
+router.post('/login', usersController.login)
+router.get('/userDetails/:email', usersController.getUser)
+router.post('/copy-order', usersController.sendCopy)
 
-router.post('/uploadpost', upload.single('postImage'),usersController.postCreate);
-router.get('/getPost', usersController.getPost);
+router.post('/uploadpost', upload.single('postImage'), usersController.postCreate)
+router.get('/getPost', usersController.getPost)
 
-
-module.exports = router;
+module.exports = router

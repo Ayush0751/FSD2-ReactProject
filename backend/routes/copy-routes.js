@@ -1,13 +1,11 @@
-const express = require('express');
-const { check } = require('express-validator');
+const express = require('express')
 
-const usersController = require('../controllers/users-controllers');
+const usersController = require('../controllers/users-controllers')
 // const fileUpload = require('../middleware/file-upload');
 
-const router = express.Router();
+const router = express.Router()
 
 // router.get('/', usersController.getUsers);
-
 
 /**
  * @swagger
@@ -24,7 +22,7 @@ const router = express.Router();
  *       properties:
  *         amount:
  *           type: Number
- *           description: Amount that user want to buy the stock for. 
+ *           description: Amount that user want to buy the stock for.
  *         stoploss:
  *           type: Number
  *           description: Stop loss as specified by user
@@ -59,7 +57,7 @@ const router = express.Router();
  *       properties:
  *         amount:
  *           type: Number
- *           description: Amount that user want to buy the stock for. 
+ *           description: Amount that user want to buy the stock for.
  *         name:
  *           type: string
  *           description: name of user
@@ -99,7 +97,6 @@ const router = express.Router();
  *               items:
  *                 $ref: '#/components/schemas/copySchema'
  */
-
 
 /**
  * @swagger
@@ -168,11 +165,11 @@ const router = express.Router();
  *         description: Some server error
  */
 
-router.get('/getOrders', usersController.getOrders);
-router.post('/copy-order', usersController.sendCopy);
-router.delete('/delete-order/:id', usersController.deleteOrder);
-router.get('/showHistory', usersController.getHistory);
+router.get('/getOrders', usersController.getOrders)
+router.post('/copy-order', usersController.sendCopy)
+router.delete('/delete-order/:id', usersController.deleteOrder)
+router.get('/showHistory', usersController.getHistory)
 // router.get('/showHistory', usersController.getHistory)
 // usersController.getOrders()
 
-module.exports = router;
+module.exports = router
