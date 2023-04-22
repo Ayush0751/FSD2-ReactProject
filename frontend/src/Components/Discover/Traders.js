@@ -1,25 +1,26 @@
-import React from "react";
-import styles from "../../Assets/css/Discover/Feed.module.css";
+/* eslint-disable*/
+import React from 'react'
+import styles from '../../Assets/css/Discover/Feed.module.css'
 
-function Traders(props) {
+function Traders (props) {
   return (
     <div>
-      <div className={styles["copiers"]}>
-        <div className={styles["copiersPic"]}>
+      <div className={styles.copiers}>
+        <div className={styles.copiersPic}>
           <img
-            src={require("../../Assets/images/Navbar/defaultDP.png")}
+            src={require('../../Assets/images/Navbar/defaultDP.png')}
             alt=""
           />
         </div>
-        <div className={styles["copiersName"]}>
+        <div className={styles.copiersName}>
           <p>{props.traderName}</p>
         </div>
-        <div className={styles["copiersProfit"]}>
+        <div className={styles.copiersProfit}>
           <p>{props.traderProfit}</p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Traders;
+export default Traders

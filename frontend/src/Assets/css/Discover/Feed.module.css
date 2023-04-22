@@ -7,10 +7,11 @@ body{
     right: 0px;
     left: 0px;
     top: 73px;
-    margin: auto;
+    margin: 1vw;
+    margin-left: 7vw;
     /* justify-content: center; */
     /* align-items: center; */
-    width: 80%;
+    width: 55%;
     height: 200%;
     /* border: 2px solid blue; */
 }
@@ -20,17 +21,20 @@ body{
     /* position: fixed; */
     /* left */
     margin: 1%;
-    width: 65%;
+    width: 100vw;
     /* border: 2px solid red; */
     display:flex;
     flex-direction: column;
+    /* align-items: center; */
     /* align-ite    ms:center; */
     /* box-shadow: 1px -2px 22px rgb(213, 199, 199); */
 }
 .textAr{
     display: flex;
-    position: relative;
-    top: 40px;
+    /* position: relative; */
+    top: 10px;
+    margin: 5vh;
+    
 }
 .textAr input{
     /* size: 10px; */
@@ -47,11 +51,13 @@ body{
     background-color: #0095EB;
     border-radius: 15%;
     cursor: pointer;
+
 }
 .post{
     /* display: flex; */
     box-shadow: 1px -2px 22px rgb(213, 199, 199);
     border: 2px;
+    height: 30vh;
     /* flex-direction: row; */
 }
 .postTop{
@@ -60,10 +66,12 @@ body{
     margin: 0px;
 }
 .dp{
-    margin: 1%;
+    margin: 2vw;
+    margin-left: 3vw;
     padding: 10px;
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
+    
     /* position: absolute; */
     /* width: 500px; */
     /* background-color: black; */
@@ -94,15 +102,16 @@ body{
     color:#d74;
 }
 .recentPosts{
-    margin: 10px 0px;
+    background-color: black;
+    margin: 20px;
     box-shadow: 1px -2px 22px rgb(213, 199, 199);
     /* border: 2px; */
 }
 .trdrDp{
-    margin: 1%;
+    margin: 1vw;
     padding: 10px;
-    width: 60px;
-    height: 60px;
+    width: 4.5vw;
+    height: 4.5vw;
     /* position: absolute; */
     /* width: 500px; */
     /* background-color: black; */
@@ -133,8 +142,11 @@ body{
     position: relative;
     top: -20px;
     left: 2%;
+    margin: 1vw;
 }
 .postHeading{
+    /* font-family:'Franklin Gothic ', 'Arial Narrow', Arial, sans-serif; */
+    font-size: 1.2em;
     width: 90%;
 }
 
@@ -171,29 +183,33 @@ body{
 .card1{
     display: flex;
     flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: fixed;
     /* border: 2px solid red; */
-    width: 24%;
-    margin: 1%;
+    width: 28vw;
+    margin: 4%;
     /* right: 1%; */
-    height: 45%;
+    height: 35vh;
     box-shadow: 1px -2px 22px rgb(213, 199, 199);
 }
 .card2{
     display: flex;
     flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     position: fixed;
     /* border: 2px solid red; */
-    width: 24%;
-    margin: 1%;
-    top: 55%;
-    height: 40%;
+    width: 28vw;
+    margin: 4%;
+    top: 50vh;
+    height: 35vh;
     box-shadow: 1px -2px 22px rgb(213, 199, 199);
 }
 
 .copiers{
     display: flex;
     flex-direction: row;
+    margin: 0.5vw;
+    margin-left: 17%;
 }
 
 .copiersPic{
@@ -220,13 +236,13 @@ body{
 
 .copiersName p{
     /* width: 20%; */
-    margin: 25px 15px 0px 18px ;
+    margin: 15px 15px 0px 18px ;
     font-weight: 100;
     font-size: 1.1rem;
 }
 .copiersProfit p{
     font-size: 1.2rem;
-    margin: 25px 15px 0px 18px ;
+    margin: 15px 15px 0px 18px ;
 }
 
 
