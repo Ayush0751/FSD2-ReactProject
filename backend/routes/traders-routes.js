@@ -1,11 +1,9 @@
-const express = require('express');
-const { check } = require('express-validator');
+const express = require('express')
 
-const usersController = require('../controllers/users-controllers');
+const usersController = require('../controllers/users-controllers')
 // const fileUpload = require('../middleware/file-upload');
-const upload = require('../middleware/upload');
-const router = express.Router();
+const router = express.Router()
 
-router.get('/allTraders', usersController.getTraders);
+router.get('/allTraders', usersController.getTraders)
 
-module.exports = router;
+module.exports = router
