@@ -24,6 +24,7 @@ jobs:
           npm i swagger-ui-express
           npm i express-validator
           npm i uuid
+          npm i multer
           
       - name: run backend
         run: |
