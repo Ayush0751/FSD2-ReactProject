@@ -14,9 +14,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: install cors
+      - name: installing dependencies
         run: |
           npm i cors
+          npm i express
+          npm i morgan
+          npm i swagger-jsdoc
           
       - name: run backend
         run: |
