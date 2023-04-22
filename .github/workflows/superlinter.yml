@@ -25,6 +25,7 @@ jobs:
           npm i express-validator
           npm i uuid
           npm i multer
+          npm i react-scripts
           
       - name: run frontend
         run: |
