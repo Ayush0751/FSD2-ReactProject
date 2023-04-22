@@ -16,11 +16,11 @@ jobs:
 
       - name: run backend
         run: |
-          cd .\backend\
+          cd backend
           node app.js
           
       - name: run frontend
         run: |
-          cd .\frontend\
+          cd frontend
           npm start
 
